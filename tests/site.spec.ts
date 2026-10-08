@@ -118,7 +118,7 @@ test.describe('etkileşim ve erişilebilirlik', () => {
       page.getByRole('button', { name: /Fractional/ }),
       page.getByRole('textbox', { name: /Adınız/ }),
       page.getByRole('button', { name: 'E-posta taslağını aç' }),
-      page.getByRole('link', { name: /Frappe Headless SaaS/ }),
+      page.getByRole('link', { name: /meta-framer/ }),
     ]
     for (const t of targets) {
       await t.focus()
