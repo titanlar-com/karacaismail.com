@@ -1,0 +1,159 @@
+[
+  {
+    "no": "01",
+    "title": "meta-framer",
+    "text": "Çok ürünlü, AI-first bir SaaS framework'ünün waterfall geliştirme sürecini planlayan WBS tabanlı eylem planı ve görev yönetimi çerçevesi. Frontend-only, JSON-as-DB.",
+    "meta": "28 app düğümü · 7 seviyeli WBS · 7 waterfall faz",
+    "tags": [
+      "WBS",
+      "JSON-as-DB",
+      "Planlama"
+    ],
+    "href": "https://karacaismail.github.io/actionplan/",
+    "wide": true,
+    "id": "w01",
+    "order": 1
+  },
+  {
+    "no": "02",
+    "title": "Kitaplık",
+    "text": "Kitap kimlikleri, Türkçe baskılar ve açıklanabilir bir okuma önceliği. 320 piksel öncelikli, JavaScript gerektirmeyen katalog sürümüyle.",
+    "meta": "920 eser · 29 küme",
+    "tags": [
+      "320 px",
+      "Katalog"
+    ],
+    "href": "https://titanlar-com.github.io/kitaps/",
+    "id": "w02",
+    "order": 2,
+    "wide": false
+  },
+  {
+    "no": "03",
+    "title": "Proje Seçim Şablonu",
+    "text": "Reklamsız, altı ayda nakit hedefi için kapılar, kriterler ve kanıt ölçeğiyle puanlanan proje seçim şablonu; formüllü çalışma kitabıyla.",
+    "meta": "45 proje · 132 ticari seçenek",
+    "tags": [
+      "Puanlama",
+      "Excel",
+      "Statik site"
+    ],
+    "href": "https://karacaismail.github.io/bpclaude/",
+    "id": "w03",
+    "order": 3,
+    "wide": false
+  },
+  {
+    "no": "04",
+    "title": "Ürün Detay Sayfası Laboratuvarı",
+    "text": "Tek üründe 12 farklı tasarım paradigması: tam i18n destekli, mobil öncelikli B2B/B2C ürün detay sayfası.",
+    "meta": "12 tasarım paradigması",
+    "tags": [
+      "E-ticaret",
+      "i18n",
+      "Mobil öncelikli"
+    ],
+    "href": "https://karacaismail.github.io/b2bproductpage/",
+    "id": "w04",
+    "order": 4,
+    "wide": false
+  },
+  {
+    "no": "05",
+    "title": "Domain Checklist",
+    "text": "Bir marka için boşta .com adaylarının puanlanabilir, listeye eklenebilir ve JSON olarak dışa aktarılabilir tek dosyalık kontrol listesi.",
+    "meta": "950 aday · RDAP doğrulamalı",
+    "tags": [
+      "Domain",
+      "Tek dosya"
+    ],
+    "href": "https://karacaismail.github.io/metaframework/",
+    "id": "w05",
+    "order": 5,
+    "wide": false
+  },
+  {
+    "no": "06",
+    "title": "Karar Sihirbazı",
+    "text": "Koşullu formu Kanban öneri motoruna çeviren, beyaz tahtadaki karar ağacını etkileşimli hale getiren prototip.",
+    "meta": "Koşul motoru · FastAPI taslağı",
+    "tags": [
+      "Karar motoru",
+      "Prototip"
+    ],
+    "href": "https://karacaismail.github.io/condtechstackform/",
+    "id": "w06",
+    "order": 6,
+    "wide": false
+  },
+  {
+    "no": "07",
+    "title": "Docs Viewer",
+    "text": "Statik JSON tabanlı, backend gerektirmeyen mimari dokümantasyon görüntüleyici. İçerik doğrulama ve testlerle.",
+    "meta": "Vite · React · MiniSearch",
+    "tags": [
+      "Dokümantasyon",
+      "TypeScript"
+    ],
+    "href": "https://karacaismail.github.io/docs-viewer/",
+    "id": "w07",
+    "order": 7,
+    "wide": false
+  },
+  {
+    "no": "08",
+    "title": "Etsy-2-Woo",
+    "text": "Etsy ürünlerini WooCommerce'e aktaran Chrome eklentisi.",
+    "meta": "Chrome Extension · REST API",
+    "tags": [
+      "E-ticaret",
+      "JavaScript"
+    ],
+    "href": "https://github.com/karacaismail/Etsy-2-Woo",
+    "id": "w08",
+    "order": 8,
+    "wide": false
+  },
+  {
+    "no": "09",
+    "title": "WooSheet Sync",
+    "text": "WooCommerce ile Google Sheets arasında senkronizasyon sağlayan Google Apps Script tabanlı entegrasyon aracı.",
+    "meta": "Apps Script · WooCommerce",
+    "tags": [
+      "Entegrasyon",
+      "Google Sheets"
+    ],
+    "href": "https://github.com/karacaismail/woosheet",
+    "id": "w09",
+    "order": 9,
+    "wide": false
+  },
+  {
+    "no": "10",
+    "title": "Stratejik Kâr Pusulası",
+    "text": "E-ticaret satıcıları için ürün ve operasyon kârlılığı, fiyatlandırma ve optimizasyon hesaplama aracı.",
+    "meta": "Titanlar aracı",
+    "tags": [
+      "E-ticaret",
+      "Analiz"
+    ],
+    "href": "https://github.com/karacaismail/Stratejik-Kar-Pusulasi",
+    "id": "w10",
+    "order": 10,
+    "wide": false
+  },
+  {
+    "no": "11",
+    "title": "Algoritmik Ticaret Eğitim Atlası",
+    "text": "Strateji simülasyonları, üç LLM raporunun karşılaştırması ve kanıt denetimi. Yatırım tavsiyesi değildir.",
+    "meta": "Eğitim · Simülasyon",
+    "tags": [
+      "Eğitim",
+      "Atlas"
+    ],
+    "href": "https://karacaismail.github.io/cyriptoEdu/",
+    "id": "w11",
+    "order": 11,
+    "wide": false
+  }
+]

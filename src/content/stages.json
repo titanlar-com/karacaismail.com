@@ -1,0 +1,30 @@
+[
+  {
+    "id": "s1",
+    "order": 1,
+    "word": "STRATEJİ",
+    "title": "Strateji",
+    "text": "Doğru soruyu bulur, kanıta dayalı bir karar çerçevesi kurarım. Neyi yapmayacağınız da karara dahildir."
+  },
+  {
+    "id": "s2",
+    "order": 2,
+    "word": "MİMARİ",
+    "title": "Mimari",
+    "text": "Veri, kimlik ve yetki katmanlarını baştan doğru çizerim; sonradan söküm gerekmesin."
+  },
+  {
+    "id": "s3",
+    "order": 3,
+    "word": "KOD",
+    "title": "Uygulama",
+    "text": "Test edilen, erişilebilir, 320 piksel genişlikten başlayan arayüzler ve servisler yazar, yayına alırım."
+  },
+  {
+    "id": "s4",
+    "order": 4,
+    "word": "SONUÇ",
+    "title": "Sonuç",
+    "text": "Açık, ölçülebilir ve devredilebilir bir sistem. Bilgi bende değil, belgede ve kodda kalır."
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "cizim",
+    "order": 1,
+    "kicker": "01",
+    "title": "Önce çizerim.",
+    "text": "Bir fikir önce bir görüntüdür. Boğaz'da bir akşamı, çizgiyi ve rengi sayfaya kendim koydum; kaydırdıkça katmanlar birbirinden ayrılıp derinleşir.",
+    "note": "Bu sahnedeki her şey elle çizilmiş SVG.",
+    "alt": "Gün batımında Boğaz: güneş, tepeler, kubbe ve minareli siluet, köprü, deniz ve martılar."
+  },
+  {
+    "id": "duzen",
+    "order": 2,
+    "kicker": "02",
+    "title": "Sonra düzenlerim.",
+    "text": "Dağınık parçalar; doğru boşluk, ritim ve hiyerarşiyle bir arayüze dönüşür. İyi deneyim görünmez, yalnızca kolay hissettirir.",
+    "note": "Parçalar gerçek arayüz bileşenleri.",
+    "alt": "Dağınık arayüz bileşenleri toplanıp düzenli bir panele dönüşür."
+  },
+  {
+    "id": "kod",
+    "order": 3,
+    "kicker": "03",
+    "title": "Sonra yazarım.",
+    "text": "Aynı düzen; tipli, test edilen ve okunur bir kodla çalışır hale gelir. Bu site de aynı kuralla yazıldı: model, görünüm modeli ve görünüm ayrı durur.",
+    "note": "Gösterilen kod bu sitenin kendi kaynağından.",
+    "alt": "Bir görünüm modeli sınıfının kodu satır satır yazılır ve testler geçer.",
+    "source": {
+      "file": "src/models/Content.ts",
+      "from": 84,
+      "to": 95,
+      "lang": "ts"
+    },
+    "checks": [
+      "Tip denetimi",
+      "Erişilebilirlik",
+      "Üç tarayıcı: Chromium, Firefox, WebKit",
+      "320 piksel"
+    ]
+  },
+  {
+    "id": "zeka",
+    "order": 4,
+    "kicker": "04",
+    "title": "Sonra bir ajana devrederim.",
+    "text": "Tekrarlayan işi ölçülebilir adımlara bölüp yapay zekâ ajanlarına veririm. Planı ben yazarım, sonucu ben denetlerim.",
+    "note": "Örnek akış: sahne olarak tasarlandı, canlı model çağrısı değildir.",
+    "alt": "Bir ajanın istek, plan, araç çağrıları ve sonuç adımları.",
+    "flow": [
+      {
+        "kind": "prompt",
+        "text": "Kaynak listesini tabloya çevir, filtreler ekle, üç tarayıcıda test et."
+      },
+      {
+        "kind": "plan",
+        "text": "Plan: ayrıştır, modele sar, görünüm modelini yaz, arayüzü kur, test et.",
+        "meta": "5 adım"
+      },
+      {
+        "kind": "tool",
+        "text": "Markdown ayrıştırıcı",
+        "meta": "içerik JSON'a döküldü"
+      },
+      {
+        "kind": "tool",
+        "text": "Görünüm modeli ve filtre mantığı",
+        "meta": "sınıf + test"
+      },
+      {
+        "kind": "tool",
+        "text": "Mantine tablo ve filtreler",
+        "meta": "klavye ve dokunma"
+      },
+      {
+        "kind": "tool",
+        "text": "Playwright: Chromium, Firefox, WebKit",
+        "meta": "hepsi geçti"
+      },
+      {
+        "kind": "result",
+        "text": "Yayına hazır. İnsan incelemesi bekliyor.",
+        "meta": "devir: İsmail"
+      }
+    ]
+  }
+]

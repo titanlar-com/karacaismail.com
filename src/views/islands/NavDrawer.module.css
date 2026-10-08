@@ -1,0 +1,8 @@
+.burger { min-width: var(--target); min-height: var(--target); }
+.drawer { background: var(--c-ink-2); }
+.overlay { background: color-mix(in srgb, var(--c-ink) 70%, transparent); }
+.mobile { display: grid; gap: 0.5rem; padding-top: 4rem; font-family: var(--font-display); font-size: var(--fs-2); }
+.mobile a { color: var(--c-bone); text-decoration: none; padding: 0.6rem 0.9rem; min-height: var(--target); display: inline-flex; align-items: center; border-radius: var(--radius-pill); }
+.mobile a:hover { color: var(--c-ember); }
+.mobile a.cta { background: var(--c-ember); color: var(--c-ink); font-weight: 700; margin-top: 1rem; justify-content: center; }
+@media (min-width: 56rem) { .burger { display: none; } }

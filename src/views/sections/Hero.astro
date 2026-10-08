@@ -1,0 +1,39 @@
+---
+import { CtaButton } from '../islands/CtaButton'
+import SplitText from '../components/SplitText.astro'
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+
+interface Props { vm: Pick<HomeViewModel, 'hero'> }
+const { hero } = Astro.props.vm
+---
+<section id="top" class="root" aria-labelledby="hero-baslik" data-effect="hero-scatter">
+  <div class="dots" data-effect="dot-grid" aria-hidden="true"></div>
+  <div class="wrap content" data-hero-fade>
+    <p class="eyebrow">{hero.kicker}</p>
+    <h1 id="hero-baslik" class="title" aria-label={hero.headline}>
+      {hero.lines.map((l, i) => <SplitText text={l} start={0.15 + i * 0.25} />)}
+    </h1>
+    <p class="lead">{hero.lead}</p>
+    <div class="actions">
+      <span data-effect="magnet"><CtaButton href={hero.primary.href} label={hero.primary.label} /></span>
+      <span data-effect="magnet"><CtaButton href={hero.secondary.href} label={hero.secondary.label} tone="ghost" /></span>
+    </div>
+  </div>
+  <a href="#hakkimda" class="scroll" data-scroll-link aria-label="Aşağı kaydır">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 5v14m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+  </a>
+</section>
+
+<style>
+  .root { position: relative; min-height: 100svh; display: grid; align-items: center; padding-block: 7rem 5rem; overflow: clip; background: radial-gradient(60rem 40rem at 80% 10%, color-mix(in srgb, var(--c-ember) 14%, transparent), transparent 70%), radial-gradient(50rem 40rem at 0% 100%, color-mix(in srgb, var(--c-tide) 12%, transparent), transparent 70%), var(--c-ink); }
+  .dots { position: absolute; inset: 0; display: grid; place-items: center; -webkit-mask-image: radial-gradient(ellipse at 65% 45%, #000 20%, transparent 78%); mask-image: radial-gradient(ellipse at 65% 45%, #000 20%, transparent 78%); touch-action: pan-y; }
+  .dots :global(i) { width: 0.3rem; height: 0.3rem; border-radius: 50%; background: var(--c-ember); opacity: 0.32; display: block; }
+  .content { position: relative; display: grid; gap: var(--space-3); z-index: 1; }
+  .content :global(.eyebrow) { margin: 0; }
+  .title { font-size: var(--fs-5); display: grid; letter-spacing: -0.035em; font-weight: 800; }
+  .title :global(.line:nth-child(2)) { color: var(--c-ember); }
+  .lead { max-width: var(--measure); font-size: var(--fs-2); color: var(--c-bone-dim); line-height: 1.45; }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-2); }
+  .scroll { position: absolute; left: 50%; bottom: 1.5rem; translate: -50% 0; width: var(--target); height: var(--target); display: grid; place-items: center; color: var(--c-bone-dim); border-radius: 50%; animation: bob 2.4s ease-in-out infinite; z-index: 2; }
+  @keyframes bob { 50% { transform: translateY(0.5rem); } }
+</style>

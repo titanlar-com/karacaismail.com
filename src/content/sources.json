@@ -1,0 +1,2012 @@
+[
+  {
+    "id": "tasarim-ve-arayuz-tailwind-css",
+    "name": "Tailwind CSS",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Atomik sınıflarla, HTML'den ayrılmadan, hızlıca özgün ve modern tasarımlar oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.tailwindcss.com\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-bootstrap",
+    "name": "Bootstrap",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Hazır UI bileşenleriyle, prototip aşamasından canlı ürüne, hızlı ve tutarlı siteler geliştirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-bulma",
+    "name": "Bulma",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Sadece CSS sınıflarını kullanarak, derleme gerektirmeyen, flexbox tabanlı modern arayüzler sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-pico-css",
+    "name": "Pico.css",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Sıfır sınıf (class) ile yalnızca HTML etiketlerini kullanarak şık ve temiz tasarımlar yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-water-css",
+    "name": "Water.css",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Hiçbir sınıf gerektirmeden, standart HTML'e otomatik olarak güzel ve basit stiller ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/water.css@2/out/water.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-mvp-css",
+    "name": "MVP.css",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Sınıf kullanmadan, standart HTML için minimalist ve şık bir başlangıç görünümü sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/mvp.css@1.12.0/mvp.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-spectre-css",
+    "name": "Spectre.css",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Hafif, modern ve duyarlı tasarımlar için esnek ve minimalist bir başlangıç noktası sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-open-props",
+    "name": "Open Props",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "CSS Çerçeveleri ve Stil Kütüphaneleri",
+    "group": "ana",
+    "description": "Hazır CSS özel değişkenleri (custom properties) ile tutarlı ve akıcı tasarımlar sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/open-props\"/>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-chakra-ui-mantine",
+    "name": "Chakra UI / Mantine",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "UI Bileşen Kitleri",
+    "group": "ana",
+    "description": "(React odaklı olsalar da stilleri CDN ile kullanılabilir) Erişilebilirlik ve modülerlik odaklı, kapsamlı UI bileşen setleri sunar.",
+    "snippets": [],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-shoelace",
+    "name": "Shoelace",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "UI Bileşen Kitleri",
+    "group": "ana",
+    "description": "Tüm framework'lerle uyumlu, profesyonel ve erişilebilir web bileşenleri koleksiyonu sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css\" />\n<script type=\"module\" src=\"https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace.js\"></script>\n<sl-button variant=\"primary\">Tıkla</sl-button>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-framework7",
+    "name": "Framework7",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "UI Bileşen Kitleri",
+    "group": "ana",
+    "description": "Mobil uygulama hissi veren, PWA uyumlu, zengin ve modern UI bileşenleri sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/framework7@8.3.3/framework7-bundle.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/framework7@8.3.3/framework7-bundle.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-ionic",
+    "name": "Ionic",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "UI Bileşen Kitleri",
+    "group": "ana",
+    "description": "Mobil öncelikli, platformlar arası çalışan, yüksek kaliteli ve modern UI bileşenleri sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script type=\"module\" src=\"https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js\"></script>\n<script nomodule src=\"https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-fontawesome",
+    "name": "FontAwesome",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "Ikon Setleri",
+    "group": "ana",
+    "description": "Binlerce ikonu, tek bir CSS dosyasıyla projelere ekleyerek, zengin bir görsel dil oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css\">\n<i class=\"fas fa-camera\"></i>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-feather-icons",
+    "name": "Feather Icons",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "Ikon Setleri",
+    "group": "ana",
+    "description": "Minimalist SVG ikonları, JavaScript ile anında HTML'e yerleştirerek, temiz arayüzler yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js\"></script>\n<i data-feather=\"circle\"></i>\n<script>feather.replace()</script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-heroicons",
+    "name": "Heroicons",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "Ikon Setleri",
+    "group": "ana",
+    "description": "Tailwind CSS ekibinin tasarladığı, modern ve sade outline/solid ikon setleri sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<img src=\"https://cdn.jsdelivr.net/npm/heroicons/24/outline/camera.svg\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-remix-icon",
+    "name": "Remix Icon",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "Ikon Setleri",
+    "group": "ana",
+    "description": "Hem \"outline\" hem \"filled\" stillerde, 2000'den fazla ikon sunarak tasarım esnekliği sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css\" rel=\"stylesheet\"/>\n<i class=\"ri-home-line\"></i>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "tasarim-ve-arayuz-material-icons",
+    "name": "Material Icons",
+    "category": "Tasarım ve Arayüz",
+    "subcategory": "Ikon Setleri",
+    "group": "ana",
+    "description": "Google'ın Tasarım Sistemi'ne ait ikonları, basit bir etiketle web sayfalarına entegre eder.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n<span class=\"material-icons\">favorite</span>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-gsap-greensock",
+    "name": "GSAP (GreenSock)",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Zaman çizelgesi tabanlı, yüksek performanslı animasyonlar oluşturarak profesyonel sonuçlar sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-anime-js",
+    "name": "Anime.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Hafif ve güçlü API'si ile karmaşık zaman çizelgesi tabanlı animasyonlar oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-motion-one",
+    "name": "Motion One",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Web Animations API'yi kullanarak, son derece hafif ve yüksek performanslı animasyonlar yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/motion\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-lottie-js-lottie-web",
+    "name": "Lottie.js (Lottie Web)",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Adobe After Effects animasyonlarını JSON dosyası olarak web'de canlı ve akıcı hale getirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-animate-css",
+    "name": "Animate.css",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Hazır CSS sınıflarıyla, HTML elemanlarına kolayca dikkat çekici animasyonlar ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css\"/>\n<h1 class=\"animate__animated animate__bounce\">Başlık</h1>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-popmotion",
+    "name": "Popmotion",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Fizik ve animasyon tabanlı, akıcı ve eğlenceli kullanıcı etkileşimleri oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/popmotion@11.0.5/dist/popmotion.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-scrollreveal",
+    "name": "ScrollReveal",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "Sayfa kaydırıldıkça elemanları ortaya çıkararak, ilgi çekici ve dinamik bir akış sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-vivus-js",
+    "name": "Vivus.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Animasyon Motorları ve Kütüphaneleri",
+    "group": "ana",
+    "description": "SVG çizimlerine sıfırdan çiziliyormuş gibi canlı animasyon efekti kazandırır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-sortable-js",
+    "name": "Sortable.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Sürükle ve bırak (drag & drop) yöntemiyle, listeleri yeniden sıralama işlevselliği kazandırır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-swiper-js",
+    "name": "Swiper.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Mobil ve dokunmatik cihazlar için, yüksek performanslı ve modern kaydırıcılar (slider) oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\"/>\n<script src=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-tippy-js",
+    "name": "Tippy.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Zengin içerikli, interaktif ve özelleştirilebilir ipucu balonları (tooltip) ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/@popperjs/core@2\"></script>\n<script src=\"https://unpkg.com/tippy.js@6\"></script>\n<button data-tippy-content=\"Bu bir ipucu!\">Buton</button>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-fancybox",
+    "name": "Fancybox",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Görsel ve videolar için, şık, modern ve kullanıcı dostu bir lightbox gösterimi sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css\"/>\n<script src=\"https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-micromodal-js",
+    "name": "Micromodal.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Erişilebilirlik odaklı, hafif ve kullanımı kolay modal (pencere) diyalogları oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/micromodal/dist/micromodal.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-sweetalert2",
+    "name": "SweetAlert2",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Standart `alert()` yerine, estetik, duyarlı ve interaktif uyarı kutuları sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-notyf",
+    "name": "Notyf",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Basit, duyarlı ve özelleştirilebilir \"toast\" bildirimleri göstermeyi sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-headroom-js",
+    "name": "Headroom.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Kullanıcı aşağı kaydırdığında gizlenip yukarı kaydırdığında görünen akıllı başlık çubukları yapar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/headroom.js@0.12.0/dist/headroom.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "etkilesim-ve-animasyon-shepherd-js",
+    "name": "Shepherd.js",
+    "category": "Etkileşim ve Animasyon",
+    "subcategory": "Arayüz Etkileşim Araçları",
+    "group": "ana",
+    "description": "Kullanıcılar için, uygulama özelliklerini tanıtan adım adım interaktif ürün turları oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/css/shepherd.css\"/>\n<script src=\"https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-jquery",
+    "name": "jQuery",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "DOM manipülasyonu, olay yönetimi ve Ajax işlemlerini basitleştirerek, tarayıcı uyumluluğu sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-lodash",
+    "name": "Lodash",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "JavaScript nesneleri, dizileri ve fonksiyonları için, tekrarlayan görevleri basitleştiren yardımcılar sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-axios",
+    "name": "Axios",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "Tarayıcı ve Node.js için Promise tabanlı, modern ve kolay bir HTTP istemcisi sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-day-js",
+    "name": "Day.js",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "Moment.js alternatifi, modern ve 2KB boyutunda minimal bir tarih/zaman işleme kütüphanesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-papaparse",
+    "name": "PapaParse",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "Tarayıcıda çalışan, hızlı ve güçlü bir şekilde CSV verilerini JSON formatına dönüştürür.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-clipboard-js",
+    "name": "Clipboard.js",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Genel Amaçlı Yardımcılar ve Veri İşleme",
+    "group": "ana",
+    "description": "Tek satır kod ile metinleri panoya kopyalama işlevini tarayıcıda kolayca ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-cleave-js",
+    "name": "Cleave.js",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Form Yönetimi ve Doğrulama",
+    "group": "ana",
+    "description": "Giriş (input) alanlarını telefon, kredi kartı gibi formatlara göre otomatik biçimlendirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-just-validate",
+    "name": "Just-validate",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Form Yönetimi ve Doğrulama",
+    "group": "ana",
+    "description": "Sıfır bağımlılığa sahip modern, basit ve esnek bir form doğrulama kütüphanesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-choices-js",
+    "name": "Choices.js",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Form Yönetimi ve Doğrulama",
+    "group": "ana",
+    "description": "Select kutularını, etiketleme ve arama özellikli modern ve çoklu seçimli bileşenlere dönüştürür.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css\"/>\n<script src=\"https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-tinymce",
+    "name": "TinyMCE",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Form Yönetimi ve Doğrulama",
+    "group": "ana",
+    "description": "Zengin metin (rich text) düzenleme için güçlü, esnek ve eklentilerle genişletilebilir bir editör sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js\" referrerpolicy=\"origin\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-zustand",
+    "name": "Zustand",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Durum Yönetimi",
+    "group": "ana",
+    "description": "React için geliştirilmiş olsa da, minimal, hızlı ve esnek bir durum yönetimi çözümü sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/zustand@4.5.2/vanilla.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-mantik-ve-yardimcilar-spruce-alpine-js-icin",
+    "name": "Spruce (Alpine.js için)",
+    "category": "Veri, Mantık ve Yardımcılar",
+    "subcategory": "Durum Yönetimi",
+    "group": "ana",
+    "description": "Alpine.js uygulamalarına basit ve reaktif bir global durum yönetimi yeteneği ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script defer src=\"https://cdn.jsdelivr.net/npm/@ryangjchandler/spruce@2.x.x/dist/spruce.umd.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "deklaratif-ve-dsl-odakli-araclar-htmx",
+    "name": "HTMX",
+    "category": "Deklaratif ve DSL Odaklı Araçlar",
+    "subcategory": null,
+    "group": "ana",
+    "description": "HTML nitelikleriyle, JavaScript yazmadan AJAX, WebSocket ve SSE etkileşimleri oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/htmx.org@1.9.12\"></script>\n<button hx-post=\"/clicked\" hx-swap=\"outerHTML\">Bana Tıkla</button>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "deklaratif-ve-dsl-odakli-araclar-alpine-js",
+    "name": "Alpine.js",
+    "category": "Deklaratif ve DSL Odaklı Araçlar",
+    "subcategory": null,
+    "group": "ana",
+    "description": "HTML içinde JavaScript kullanarak, Vue benzeri reaktif ve etkileşimli arayüzler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script defer src=\"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js\"></script>\n<div x-data=\"{ count: 0 }\">\n<button @click=\"count++\">Arttır</button>\n<span x-text=\"count\"></span>\n</div>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "deklaratif-ve-dsl-odakli-araclar-petite-vue",
+    "name": "Petite Vue",
+    "category": "Deklaratif ve DSL Odaklı Araçlar",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Vue.js'in 6KB'lık, CDN ile çalışan ve anında reaktivite sağlayan hafif versiyonudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/petite-vue\" defer init></script>\n<div v-scope=\"{ count: 0 }\">\n{{ count }}\n<button @click=\"count++\">+</button>\n</div>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "deklaratif-ve-dsl-odakli-araclar-hyperscript",
+    "name": "Hyperscript",
+    "category": "Deklaratif ve DSL Odaklı Araçlar",
+    "subcategory": null,
+    "group": "ana",
+    "description": "HTML içinde `on click wait 2s then add .red` gibi doğal dil benzeri scriptler yazmayı sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/hyperscript.org@0.9.12\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "deklaratif-ve-dsl-odakli-araclar-reef-js",
+    "name": "Reef.js",
+    "category": "Deklaratif ve DSL Odaklı Araçlar",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Hafif, basit ve reaktif arayüz bileşenleri oluşturmak için tasarlanmış vanilla JS aracıdır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/reefjs@13/dist/reef.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-chart-js",
+    "name": "Chart.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "Veri Görselleştirme ve Grafikler",
+    "group": "ana",
+    "description": "HTML5 Canvas kullanarak, modern, duyarlı ve etkileşimli veri grafikleri oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-d3-js",
+    "name": "D3.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "Veri Görselleştirme ve Grafikler",
+    "group": "ana",
+    "description": "Veriye dayalı olarak, dinamik ve interaktif SVG tabanlı belgeler oluşturmak için güçlü bir araçtır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://d3js.org/d3.v7.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-plotly-js",
+    "name": "Plotly.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "Veri Görselleştirme ve Grafikler",
+    "group": "ana",
+    "description": "Bilimsel ve istatistiksel, yüksek kaliteli ve interaktif 2D/3D grafikler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.plot.ly/plotly-2.32.0.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-echarts",
+    "name": "ECharts",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "Veri Görselleştirme ve Grafikler",
+    "group": "ana",
+    "description": "Apache tarafından geliştirilen, güçlü, özelleştirilebilir ve etkileşimli bir grafik kütüphanesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-three-js",
+    "name": "Three.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "2D/3D Grafik ve Render Motorları",
+    "group": "ana",
+    "description": "WebGL tabanlı, tam teşekküllü 3D sahneler ve interaktif deneyimler yaratmak için kullanılır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-pixi-js",
+    "name": "Pixi.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "2D/3D Grafik ve Render Motorları",
+    "group": "ana",
+    "description": "WebGL hızlandırmalı, yüksek performanslı 2D render motoru ile etkileşimli grafikler sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/pixi.js@8.1.5/dist/pixi.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-matter-js",
+    "name": "Matter.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "2D/3D Grafik ve Render Motorları",
+    "group": "ana",
+    "description": "2D fizik motoru ile çarpışma, yerçekimi ve sürtünme gibi gerçekçi hareketler simüle eder.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-phaser",
+    "name": "Phaser",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "2D/3D Grafik ve Render Motorları",
+    "group": "ana",
+    "description": "2D oyun geliştirmek için, Canvas ve WebGL destekli, zengin özellikli bir oyun motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "grafik-gorsellestirme-ve-motorlar-p5-js",
+    "name": "p5.js",
+    "category": "Grafik, Görselleştirme ve Motorlar",
+    "subcategory": "2D/3D Grafik ve Render Motorları",
+    "group": "ana",
+    "description": "Yaratıcı kodlama (creative coding) odaklı, interaktif grafik ve animasyonlar için bir çizim motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-prism-js",
+    "name": "Prism.js",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Hafif, genişletilebilir ve modern bir şekilde, kod bloklarına sözdizimi vurgulaması ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css\" rel=\"stylesheet\" />\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-marked-js",
+    "name": "Marked.js",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Hızlı ve hafif bir şekilde, Markdown metinlerini HTML'e ayrıştırır ve derler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/marked/marked.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-dompurify",
+    "name": "DOMPurify",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "HTML'i XSS saldırılarına karşı temizleyerek, kullanıcı tarafından girilen içeriği güvenli hale getirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-pdf-js",
+    "name": "pdf.js",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "PDF dosyalarını, harici bir görüntüleyiciye ihtiyaç duymadan doğrudan tarayıcıda render eder.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/pdfjs-dist@4.3.136/build/pdf.min.mjs\" type=\"module\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-tesseract-js",
+    "name": "Tesseract.js",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Görüntülerdeki metinleri, OCR (Optik Karakter Tanıma) motoru ile tarayıcıda okur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelistirici-araclari-ve-ozel-amacli-kutuphaneler-pwacompat",
+    "name": "PWACompat",
+    "category": "Geliştirici Araçları ve Özel Amaçlı Kütüphaneler",
+    "subcategory": null,
+    "group": "ana",
+    "description": "Manifest desteklemeyen eski tarayıcılar için, PWA özelliklerine (ikon vb.) uyumluluk sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/pwacompat\" async></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-ve-yardimci-kutuphaneler-luxon",
+    "name": "Luxon",
+    "category": "UI ve Yardımcı Kütüphaneler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tarih ve saat işlemleri için, Day.js'ten daha kapsamlı ve nesne yönelimli bir çözüm sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-ve-yardimci-kutuphaneler-wired-elements",
+    "name": "Wired Elements",
+    "category": "UI ve Yardımcı Kütüphaneler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML elemanlarına el çizimi (sketch) görünümü vererek, eğlenceli ve özgün prototipler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script type=\"module\" src=\"https://cdn.jsdelivr.net/npm/wired-elements/dist/wired-elements.bundled.js\"></script>\n<wired-button>El Çizimi Buton</wired-button>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-ve-yardimci-kutuphaneler-isotope",
+    "name": "Isotope",
+    "category": "UI ve Yardımcı Kütüphaneler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Öğeleri filtreleyerek ve sıralayarak, akıllı ve animasyonlu \"masonry\" düzenleri oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-ve-yardimci-kutuphaneler-popper-js",
+    "name": "Popper.js",
+    "category": "UI ve Yardımcı Kütüphaneler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tooltip ve popover gibi açılır pencerelerin konumlandırılmasını, akıllıca ve hassas şekilde yönetir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/@popperjs/core@2\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-ve-yardimci-kutuphaneler-tabulator",
+    "name": "Tabulator",
+    "category": "UI ve Yardımcı Kütüphaneler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML tablolarını, sıralama, filtreleme ve düzenleme gibi özelliklerle interaktif hale getirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://unpkg.com/tabulator-tables@6.2.1/dist/css/tabulator.min.css\" rel=\"stylesheet\">\n<script type=\"text/javascript\" src=\"https://unpkg.com/tabulator-tables@6.2.1/dist/js/tabulator.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelismis-animasyon-ve-etkilesim-scrollmagic",
+    "name": "ScrollMagic",
+    "category": "Gelişmiş Animasyon ve Etkileşim",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Sayfa kaydırma (scroll) pozisyonuna bağlı olarak, gelişmiş ve senkronize animasyonlar tetikler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelismis-animasyon-ve-etkilesim-parallax-js",
+    "name": "Parallax.js",
+    "category": "Gelişmiş Animasyon ve Etkileşim",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Fare veya cihaz hareketine tepki veren, katmanlı ve hafif paralaks (parallax) efektleri yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/parallax-js@3.1.0/dist/parallax.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelismis-animasyon-ve-etkilesim-typeit",
+    "name": "TypeIt",
+    "category": "Gelişmiş Animasyon ve Etkileşim",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Yazıların harf harf yazılıyormuş gibi görünmesini sağlayarak, dinamik ve dikkat çekici metinler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/typeit@8.8.3/dist/index.umd.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "gelismis-animasyon-ve-etkilesim-hover-css",
+    "name": "Hover.css",
+    "category": "Gelişmiş Animasyon ve Etkileşim",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Fare ile üzerine gelindiğinde çalışan, 100'den fazla hazır ve dikkat çekici CSS efekti sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css\" rel=\"stylesheet\">\n<a href=\"#\" class=\"hvr-grow\">Büyüt</a>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "form-ve-dogrulama-parsley-js",
+    "name": "Parsley.js",
+    "category": "Form ve Doğrulama",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML nitelikleri ile çalışan, kullanıcı dostu ve otomatik form doğrulama altyapısı sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "form-ve-dogrulama-validate-js",
+    "name": "Validate.js",
+    "category": "Form ve Doğrulama",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Doğrulama kurallarını JavaScript objesi olarak tanımlayarak, esnek ve model tabanlı doğrulama sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "medya-oynaticilar-ve-goruntuleyiciler-plyr",
+    "name": "Plyr",
+    "category": "Medya Oynatıcılar ve Görüntüleyiciler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML5 video/audio elemanlarını, modern, erişilebilir ve özelleştirilebilir bir oynatıcıya dönüştürür.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.plyr.io/3.7.8/plyr.css\" />\n<script src=\"https://cdn.plyr.io/3.7.8/plyr.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "medya-oynaticilar-ve-goruntuleyiciler-photoswipe",
+    "name": "PhotoSwipe",
+    "category": "Medya Oynatıcılar ve Görüntüleyiciler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Mobil ve masaüstü için optimize edilmiş, dokunmatik hareketleri destekleyen resim galerisi sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.css\">\n<script src=\"https://unpkg.com/photoswipe@5.4.3/dist/photoswipe.esm.js\" type=\"module\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "medya-oynaticilar-ve-goruntuleyiciler-viewer-js",
+    "name": "Viewer.js",
+    "category": "Medya Oynatıcılar ve Görüntüleyiciler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Resimler için yakınlaştırma, döndürme ve tam ekran gibi özellikler sunan basit bir görüntüleyicidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "matematik-kural-ve-sablon-motorlari-math-js",
+    "name": "Math.js",
+    "category": "Matematik, Kural ve Şablon Motorları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Matematiksel ifadeleri, sembolik cebir ve matris işlemlerini tarayıcıda çalıştıran bir motordur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/mathjs@13.0.0/lib/browser/math.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "matematik-kural-ve-sablon-motorlari-handlebars-js",
+    "name": "Handlebars.js",
+    "category": "Matematik, Kural ve Şablon Motorları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "`{{#if}}` gibi mantıksal yapılarla, JSON verisini HTML şablonlarına bağlayan güçlü bir motordur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/handlebars@4.7.8/dist/handlebars.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "matematik-kural-ve-sablon-motorlari-mustache-js",
+    "name": "Mustache.js",
+    "category": "Matematik, Kural ve Şablon Motorları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Mantıksal ifadeler içermeyen (logic-less), basit ve temiz bir HTML şablonlama motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "matematik-kural-ve-sablon-motorlari-json-logic-js",
+    "name": "json-logic-js",
+    "category": "Matematik, Kural ve Şablon Motorları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Karmaşık kuralları JSON formatında tanımlayıp, bu kuralları veri üzerinde çalıştıran bir motordur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/json-logic-js@2.0.2/dist/json-logic.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "oyun-fizik-ve-dusuk-seviye-motorlar-kaboom-js",
+    "name": "Kaboom.js",
+    "category": "Oyun, Fizik ve Düşük Seviye Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Basit ve eğlenceli bir sözdizimi ile, hızlıca retro arcade tarzı oyunlar geliştirmeyi sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "oyun-fizik-ve-dusuk-seviye-motorlar-rough-js",
+    "name": "Rough.js",
+    "category": "Oyun, Fizik ve Düşük Seviye Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Canvas veya SVG üzerine, sanki elle çizilmiş gibi görünen şekiller ve çizgiler çizer.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/roughjs@4.6.6/dist/rough.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "oyun-fizik-ve-dusuk-seviye-motorlar-fflate",
+    "name": "fflate",
+    "category": "Oyun, Fizik ve Düşük Seviye Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tarayıcıda yüksek performansla çalışan, GZIP/ZIP gibi formatlarda veri sıkıştırma motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "pwa-ve-bildirim-yardimcilari-onesignal-sdk",
+    "name": "OneSignal SDK",
+    "category": "PWA ve Bildirim Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Web sitelerine, platformlar arası çalışan anlık bildirim (push notification) özelliği ekler.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js\" defer></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "pwa-ve-bildirim-yardimcilari-push-js",
+    "name": "Push.js",
+    "category": "PWA ve Bildirim Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tarayıcının Notification API'sini basitleştirerek, masaüstü bildirimleri göndermeyi kolaylaştırır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ek-ikon-setleri-lucide-icons",
+    "name": "Lucide Icons",
+    "category": "Ek Ikon Setleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Feather Icons'un devamı niteliğinde, daha kapsamlı ve topluluk tarafından geliştirilen bir ikon setidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/lucide@latest\"></script>\n<i data-lucide=\"home\"></i>\n<script>lucide.createIcons();</script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ek-ikon-setleri-phosphor-icons",
+    "name": "Phosphor Icons",
+    "category": "Ek Ikon Setleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Farklı kalınlıklarda (thin, light, bold, fill) sunulan, esnek ve modern bir ikon ailesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/@phosphor-icons/web@2.1.1\"></script>\n<i class=\"ph-bold ph-heart\"></i>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ek-ikon-setleri-tabler-icons",
+    "name": "Tabler Icons",
+    "category": "Ek Ikon Setleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "2000'den fazla, sade, modern ve 1.5px çizgi kalınlığına sahip tutarlı bir ikon setidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css\">\n<i class=\"ti ti-settings\"></i>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ek-ikon-setleri-simple-icons",
+    "name": "Simple Icons",
+    "category": "Ek Ikon Setleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "GitHub, Twitter gibi popüler markaların logolarını içeren, SVG formatında bir ikon koleksiyonudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<img src=\"https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/google.svg\" />"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "css-cerceveleri-ve-yardimcilari-materialize",
+    "name": "Materialize",
+    "category": "CSS Çerçeveleri ve Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Google'ın Materyal Tasarım ilkelerini, hazır bileşenlerle web'e taşıyarak tutarlı arayüzler sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "css-cerceveleri-ve-yardimcilari-balloon-css",
+    "name": "Balloon.css",
+    "category": "CSS Çerçeveleri ve Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML `data-balloon` niteliğiyle, JavaScript gerektirmeyen, saf CSS ile tooltip'ler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/balloon-css/1.2.0/balloon.min.css\">\n<button data-balloon=\"Bu bir ipucu!\" data-balloon-pos=\"up\">Buton</button>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "css-cerceveleri-ve-yardimcilari-mobi-css",
+    "name": "Mobi.css",
+    "category": "CSS Çerçeveleri ve Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Mobil öncelikli, sadece 4KB boyutunda, esnek ve minimalist bir CSS çerçevesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/mobi.css/dist/mobi.min.css\" />"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "css-cerceveleri-ve-yardimcilari-basscss",
+    "name": "Basscss",
+    "category": "CSS Çerçeveleri ve Yardımcıları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Fonksiyonel (utility-first) sınıflarla, hızlı prototipleme ve modüler tasarım imkanı sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://unpkg.com/basscss@8.0.2/css/basscss.min.css\" rel=\"stylesheet\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "form-yonetimi-ve-dogrulama-formvalidation-io",
+    "name": "FormValidation.io",
+    "category": "Form Yönetimi ve Doğrulama",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Bootstrap dahil birçok framework ile uyumlu, kapsamlı ve güçlü bir form doğrulama motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.2-dev/js/formValidation.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "form-yonetimi-ve-dogrulama-autonumeric",
+    "name": "AutoNumeric",
+    "category": "Form Yönetimi ve Doğrulama",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Sayısal girişler için para birimi, ondalık ve otomatik formatlama yetenekleri sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/autonumeric@4.6.0/dist/autoNumeric.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-gorsellestirme-ve-grafikler-uplot",
+    "name": "uPlot",
+    "category": "Veri Görselleştirme ve Grafikler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Zaman serisi verileri için, ultra hızlı, küçük boyutlu ve etkili bir grafik kütüphanesidir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/uplot@1.6.27/dist/uPlot.min.css\">\n<script src=\"https://unpkg.com/uplot@1.6.27/dist/uPlot.iife.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "veri-gorsellestirme-ve-grafikler-billboard-js",
+    "name": "billboard.js",
+    "category": "Veri Görselleştirme ve Grafikler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "D3.js tabanlı, yeniden kullanılabilir ve kolayca özelleştirilebilen interaktif grafikler oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "dusuk-seviye-ve-dsl-araclari-sinuous",
+    "name": "Sinuous",
+    "category": "Düşük Seviye ve DSL Araçları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tagged template literal'lar ile JSX benzeri, son derece hızlı ve reaktif bir UI yapısı sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/sinuous/dist/sinuous.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "dusuk-seviye-ve-dsl-araclari-jexl-javascript-expression-language",
+    "name": "Jexl (JavaScript Expression Language)",
+    "category": "Düşük Seviye ve DSL Araçları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "JSON verileri içinde `user.age > 18` gibi mantıksal ifadeleri değerlendiren bir DSL motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/jexl@2.3.0/dist/jexl.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "dusuk-seviye-ve-dsl-araclari-nerdamer",
+    "name": "Nerdamer",
+    "category": "Düşük Seviye ve DSL Araçları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tarayıcıda sembolik matematik (cebir, kalkülüs) işlemleri yapabilen bir CAS motorudur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/nerdamer@1.1.13/nerdamer.core.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ozel-amacli-yardimcilar-ve-motorlar-chance-js",
+    "name": "Chance.js",
+    "category": "Özel Amaçlı Yardımcılar ve Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Test veya prototipleme için, isim, adres, sayı gibi rastgele ve sahte veriler üretir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/chance@1.1.11/chance.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ozel-amacli-yardimcilar-ve-motorlar-timeago-js",
+    "name": "Timeago.js",
+    "category": "Özel Amaçlı Yardımcılar ve Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Tarih-saat bilgisini, \"5 dakika önce\" gibi okunabilir ve göreceli bir formata dönüştürür.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ozel-amacli-yardimcilar-ve-motorlar-babel-standalone",
+    "name": "Babel Standalone",
+    "category": "Özel Amaçlı Yardımcılar ve Motorlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Modern JavaScript (ES6+) kodunu, derleme adımı olmadan doğrudan tarayıcıda çalıştırır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/@babel/standalone/babel.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "low-code-sunum-ve-site-olusturucular-retool-budibase",
+    "name": "Retool / BudiBase",
+    "category": "Low-Code, Sunum ve Site Oluşturucular",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "(Konsept olarak) Hazır bileşenlerle, sürükle-bırak yöntemiyle hızlıca iç yönetim panelleri oluşturur.",
+    "snippets": [],
+    "scenario": null
+  },
+  {
+    "id": "low-code-sunum-ve-site-olusturucular-reveal-js",
+    "name": "Reveal.js",
+    "category": "Low-Code, Sunum ve Site Oluşturucular",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "HTML veya Markdown kullanarak, şık, interaktif ve dokunmatik uyumlu sunum slaytları oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "low-code-sunum-ve-site-olusturucular-carrd",
+    "name": "Carrd",
+    "category": "Low-Code, Sunum ve Site Oluşturucular",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "(Platform olarak) Basit, duyarlı ve genellikle tek sayfalık siteler oluşturmak için kullanılır.",
+    "snippets": [],
+    "scenario": null
+  },
+  {
+    "id": "kullanici-deneyimi-ux-analiz-araclari-fullstory-lite",
+    "name": "FullStory Lite",
+    "category": "Kullanıcı Deneyimi (UX) Analiz Araçları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Kullanıcı oturumlarını video gibi kaydederek, UX hatalarını ve etkileşimleri analiz etmeyi sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": ""
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "kullanici-deneyimi-ux-analiz-araclari-uxsniff-js",
+    "name": "UXSniff.js",
+    "category": "Kullanıcı Deneyimi (UX) Analiz Araçları",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Lighthouse benzeri, sitenin kullanıcı deneyimi performansını (hız, erişilebilirlik) analiz eder.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": ""
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "animasyon-ve-efekt-kutuphaneleri-csshake",
+    "name": "CSShake",
+    "category": "Animasyon ve Efekt Kütüphaneleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Kullanıcı dikkatini çekmek için çeşitli, CSS tabanlı sarsma (shake) efektleri koleksiyonu sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://csshake.surge.sh/csshake.min.css\">\n<div class=\"shake\">Bu kutu sallanır.</div>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "animasyon-ve-efekt-kutuphaneleri-spinkit",
+    "name": "SpinKit",
+    "category": "Animasyon ve Efekt Kütüphaneleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Yalnızca CSS kullanarak, farklı stillerde şık ve çeşitli yükleme (spinner) animasyonları sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "animasyon-ve-efekt-kutuphaneleri-waitme-js",
+    "name": "WaitMe.js",
+    "category": "Animasyon ve Efekt Kütüphaneleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "İşlem anında ekranı kilitleyip, animasyonlu geri bildirim sağlayarak kullanıcıyı bilgilendirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/waitme@1.19.0/waitMe.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/waitme@1.19.0/waitMe.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "animasyon-ve-efekt-kutuphaneleri-animxyz",
+    "name": "AnimXYZ",
+    "category": "Animasyon ve Efekt Kütüphaneleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "CSS değişkenleri ve nitelikler kullanarak, birleştirilebilir ve özelleştirilebilir animasyonlar yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdn.jsdelivr.net/npm/@animxyz/core/dist/animxyz.min.css\" rel=\"stylesheet\">\n<div xyz=\"fade up\">Animasyonlu Kutu</div>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "animasyon-ve-efekt-kutuphaneleri-loaders-css",
+    "name": "Loaders.css",
+    "category": "Animasyon ve Efekt Kütüphaneleri",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Asenkron işlemlerde bekleme hissini azaltan, 50'den fazla CSS yükleyici animasyonu sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/loaders.css/loaders.min.css\">"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-bilesenleri-ve-yardimci-araclar-awesomplete",
+    "name": "Awesomplete",
+    "category": "UI Bileşenleri ve Yardımcı Araçlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Sıfır bağımlılığa sahip, ultra hafif ve özelleştirilebilir bir otomatik tamamlama (autocomplete) aracıdır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "ui-bilesenleri-ve-yardimci-araclar-dropzone-js",
+    "name": "Dropzone.js",
+    "category": "UI Bileşenleri ve Yardımcı Araçlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "CDN ile çalışan, sürükle-bırak destekli, önizlemeli dosya yükleme (upload) çözümü sunar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.css\" type=\"text/css\" />\n<script src=\"https://unpkg.com/dropzone@5/dist/min/dropzone.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "bildirimler-ve-uyarilar-toastr-js",
+    "name": "Toastr.js",
+    "category": "Bildirimler ve Uyarılar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Klasik, hızlı ve duyarlı \"toast\" (geçici bildirim kutucuğu) bildirimleri için popüler bir çözümdür.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "kullanici-rehberleri-ve-turlar-intro-js",
+    "name": "Intro.js",
+    "category": "Kullanıcı Rehberleri ve Turlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Belirli alanları vurgulayarak, kullanıcıya yol gösteren adım adım ürün tanıtım sihirbazları yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "kullanici-rehberleri-ve-turlar-hopscotch",
+    "name": "Hopscotch",
+    "category": "Kullanıcı Rehberleri ve Turlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Geliştiricilerin, kolayca çok adımlı kullanıcı turu ve ürün eğitim adımları oluşturmasını sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<link href=\"https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/css/hopscotch.min.css\" rel=\"stylesheet\"/>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/js/hopscotch.min.js\"></script>"
+      }
+    ],
+    "scenario": null
+  },
+  {
+    "id": "interaktif-arayuz-ve-mikro-etkilesimler-canvas-confetti",
+    "name": "canvas-confetti",
+    "category": "İnteraktif Arayüz ve Mikro Etkileşimler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Ekranın herhangi bir yerinden, gerçekçi fizik tabanlı konfeti efektleri fırlatarak başarı anlarını kutlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js\"></script>"
+      }
+    ],
+    "scenario": "Ödeme tamamlandığında, bir görev bitirildiğinde veya bir skor kazanıldığında kullanıcıyı ödüllendirmek için idealdir."
+  },
+  {
+    "id": "interaktif-arayuz-ve-mikro-etkilesimler-kbar",
+    "name": "Kbar",
+    "category": "İnteraktif Arayüz ve Mikro Etkileşimler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Modern web uygulamalarındaki gibi (Cmd/Ctrl+K), aranabilir bir komut paleti oluşturmayı sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/kbar@0.1.0-beta.45/dist/index.js\"></script>"
+      }
+    ],
+    "scenario": "Sitede hızlı gezinme, eylem arama veya ayarları değiştirme gibi özellikler sunmak için kullanılır."
+  },
+  {
+    "id": "interaktif-arayuz-ve-mikro-etkilesimler-hammer-js",
+    "name": "Hammer.js",
+    "category": "İnteraktif Arayüz ve Mikro Etkileşimler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Dokunmatik cihazlar için `pinch`, `rotate`, `pan` gibi gelişmiş çoklu dokunma (multi-touch) hareketlerini algılar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js\"></script>"
+      }
+    ],
+    "scenario": "Resim galerilerinde yakınlaştırma/döndürme veya harita uygulamalarında gezinme için mükemmeldir."
+  },
+  {
+    "id": "interaktif-arayuz-ve-mikro-etkilesimler-macy-js",
+    "name": "Macy.js",
+    "category": "İnteraktif Arayüz ve Mikro Etkileşimler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Isotope/Masonry alternatifi, sıfır bağımlılığa sahip, son derece hafif ve performanslı bir \"düzensiz grid\" düzeni oluşturur.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js\"></script>"
+      }
+    ],
+    "scenario": "Pinterest benzeri, farklı boyutlardaki görsellerden oluşan galeriler ve portfolyolar için idealdir."
+  },
+  {
+    "id": "yaratici-kodlama-ve-gorsel-sanatlar-rough-notation",
+    "name": "Rough Notation",
+    "category": "Yaratıcı Kodlama ve Görsel Sanatlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Metinlerin belirli kısımlarını, sanki elle çizilmiş gibi (altı çizili, üstü karalanmış, kutu içine alınmış) vurgular.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script type=\"module\" src=\"https://unpkg.com/rough-notation?module\"></script>"
+      }
+    ],
+    "scenario": "Blog yazılarında veya ana sayfalarda önemli bir metne dikkat çekmek için özgün ve organik bir yol sunar."
+  },
+  {
+    "id": "yaratici-kodlama-ve-gorsel-sanatlar-hydra",
+    "name": "Hydra",
+    "category": "Yaratıcı Kodlama ve Görsel Sanatlar",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Canlı kodlama (live-coding) ile modüler, video-synthesizer benzeri, etkileşimli ve akışkan görseller yaratır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/hydra-synth\"></script>"
+      }
+    ],
+    "scenario": "Web siteleri için dinamik arka planlar, müzik görselleştirmeleri veya dijital sanat enstalasyonları oluşturmak için kullanılır."
+  },
+  {
+    "id": "gelismis-mantik-ve-durum-yonetimi-xstate",
+    "name": "XState",
+    "category": "Gelişmiş Mantık ve Durum Yönetimi",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Sonlu durum makineleri (state machines) ve statechart'ları kullanarak karmaşık UI akışlarını hatasız ve görselleştirilebilir hale getirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/xstate@4/dist/xstate.js\"></script>"
+      }
+    ],
+    "scenario": "Çok adımlı formlar, ödeme süreçleri veya bir kullanıcının (login, loading, success, error gibi) tüm olası durumlarını yönetmek için idealdir."
+  },
+  {
+    "id": "gelismis-mantik-ve-durum-yonetimi-immer",
+    "name": "Immer",
+    "category": "Gelişmiş Mantık ve Durum Yönetimi",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Değişmez (immutable) state'leri, sanki normal bir JavaScript nesnesini değiştiriyormuş gibi kolayca ve güvenle güncellemenizi sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/immer@9.0.6/dist/immer.umd.production.min.js\"></script>"
+      }
+    ],
+    "scenario": "Zustand, Redux gibi durum yönetimi kütüphanelerinde state'in kazara değiştirilmesini önlemek ve kod okunabilirliğini artırmak için kullanılır."
+  },
+  {
+    "id": "webassembly-ve-tarayicida-yuksek-performans-sql-js",
+    "name": "sql.js",
+    "category": "WebAssembly ve Tarayıcıda Yüksek Performans",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "SQLite veritabanını tamamen tarayıcı içinde çalıştırarak, istemci tarafında karmaşık SQL sorguları yapmanızı sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js\"></script>"
+      }
+    ],
+    "scenario": "Çevrimdışı çalışabilen uygulamalar, istemci tarafında veri analizi araçları veya statik sitelerde dinamik veri sorgulama için kullanılır."
+  },
+  {
+    "id": "tipografi-ve-metin-manipulasyonu-splittype-js",
+    "name": "SplitType.js",
+    "category": "Tipografi ve Metin Manipülasyonu",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Bir metni karakterlerine, kelimelerine ve satırlarına ayırarak, her bir parça üzerinde ayrı ayrı animasyon kontrolü sağlar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/split-type.min.js\"></script>"
+      }
+    ],
+    "scenario": "GSAP veya Anime.js gibi kütüphanelerle birlikte kullanılarak, gelişmiş ve etkileyici metin animasyonları oluşturulur."
+  },
+  {
+    "id": "tipografi-ve-metin-manipulasyonu-fitty-js",
+    "name": "fitty.js",
+    "category": "Tipografi ve Metin Manipülasyonu",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Bir başlık veya metni, içinde bulunduğu kapsayıcıya tam olarak sığacak şekilde dinamik olarak ölçeklendirir.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/fitty@2.3.7/dist/fitty.min.js\"></script>"
+      }
+    ],
+    "scenario": "Farklı ekran boyutlarında başlıkların taşmasını veya çok küçük kalmasını önlemek için duyarlı tasarımlarda kullanılır."
+  },
+  {
+    "id": "tarayici-tabanli-yapay-zeka-ve-gelismis-api-ler-tensorflow-js",
+    "name": "TensorFlow.js",
+    "category": "Tarayıcı Tabanlı Yapay Zeka ve Gelişmiş API'ler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "Yapay zeka ve makine öğrenmesi modellerini, sunucuya ihtiyaç duymadan doğrudan tarayıcıda eğitir ve çalıştırır.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js\"></script>"
+      }
+    ],
+    "scenario": "Web kamerası ile nesne tanıma, hareket algılama veya kişiselleştirilmiş öneri sistemleri gibi özellikler için kullanılır."
+  },
+  {
+    "id": "tarayici-tabanli-yapay-zeka-ve-gelismis-api-ler-peerjs",
+    "name": "PeerJS",
+    "category": "Tarayıcı Tabanlı Yapay Zeka ve Gelişmiş API'ler",
+    "subcategory": null,
+    "group": "ayrica",
+    "description": "WebRTC'yi basitleştirerek, tarayıcılar arasında sunucuya gerek kalmadan P2P (eşten eşe) ses, video veya veri bağlantısı kurar.",
+    "snippets": [
+      {
+        "lang": "html",
+        "code": "<script src=\"https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js\"></script>"
+      }
+    ],
+    "scenario": "Basit video sohbet uygulamaları, çok oyunculu tarayıcı oyunları veya dosya paylaşım araçları oluşturmak için idealdir."
+  }
+]

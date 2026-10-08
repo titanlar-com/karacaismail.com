@@ -1,0 +1,23 @@
+---
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+interface Props { vm: Pick<HomeViewModel, 'manifesto'> }
+const { manifesto } = Astro.props.vm
+---
+<section id="hakkimda" class="section root" aria-labelledby="hakkimda-baslik" data-effect="word-reveal">
+  <div class="shape" data-shape aria-hidden="true"></div>
+  <div class="wrap inner">
+    <p class="eyebrow">Hakkımda</p>
+    <h2 id="hakkimda-baslik" class="sr-only">Hakkımda</h2>
+    <p class="text">{manifesto.words.map((w) => <Fragment><span data-w>{w}</span>{' '}</Fragment>)}</p>
+    <p class="sub">{manifesto.sub}</p>
+  </div>
+</section>
+
+<style>
+  .root { overflow: clip; }
+  .inner { position: relative; z-index: 1; }
+  .text { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-4); line-height: 1.08; letter-spacing: -0.03em; max-width: 24ch; margin-block: var(--space-3) var(--space-4); text-wrap: balance; }
+  @media (min-width: 56rem) { .text { max-width: 30ch; } }
+  .sub { max-width: var(--measure); color: var(--c-bone-dim); font-size: var(--fs-2); line-height: 1.5; }
+  .shape { position: absolute; right: -8rem; top: 18%; width: 24rem; height: 24rem; border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%; background: conic-gradient(from 90deg, var(--c-ember), var(--c-gold), var(--c-tide), var(--c-ember)); opacity: 0.16; filter: blur(2px); pointer-events: none; }
+</style>

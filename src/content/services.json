@@ -1,0 +1,69 @@
+[
+  {
+    "id": "cto",
+    "order": 1,
+    "title": "CTO ve Strateji Danışmanlığı",
+    "text": "Yarı zamanlı CTO olarak teknoloji yol haritası, ekip ve satıcı kararları, mimari inceleme ve yatırım önceliklendirme.",
+    "tags": [
+      "Fractional CTO",
+      "Yol haritası",
+      "Karar çerçevesi"
+    ]
+  },
+  {
+    "id": "platform",
+    "order": 2,
+    "title": "Platform ve SaaS Mimarisi",
+    "text": "Çok kiracılı SaaS, kimlik ve yetki, operasyon düzlemi: sonradan söküm gerektirmeyen platform tasarımı.",
+    "tags": [
+      "SaaS",
+      "Kimlik",
+      "Self-hosted"
+    ]
+  },
+  {
+    "id": "ai",
+    "order": 3,
+    "title": "Yapay Zekâ ve Ajan Akışları",
+    "text": "Ajan iş akışları, MCP bağlantıları ve AI-first arayüzler: gösterişten çok işe yarayan otomasyon.",
+    "tags": [
+      "MCP",
+      "Ajan akışları",
+      "AI-first UI"
+    ]
+  },
+  {
+    "id": "ux",
+    "order": 4,
+    "title": "Arayüz ve Tasarım Sistemleri",
+    "text": "Token tabanlı tasarım sistemleri, 320 pikselden başlayan uyarlanabilir arayüzler, illüstrasyon ve hareket, WCAG 2.2 AA.",
+    "tags": [
+      "UX",
+      "İllüstrasyon",
+      "Playwright",
+      "WCAG 2.2"
+    ]
+  },
+  {
+    "id": "commerce",
+    "order": 5,
+    "title": "B2B Pazar Yeri ve E-ticaret",
+    "text": "Soğuk başlangıç ve likidite stratejisi, WooCommerce entegrasyonları, kârlılık ve fiyatlandırma araçları.",
+    "tags": [
+      "B2B",
+      "WooCommerce",
+      "Entegrasyon"
+    ]
+  },
+  {
+    "id": "atlas",
+    "order": 6,
+    "title": "Bilgi Atlasları ve Karar Destek",
+    "text": "Dağınık bilgiyi kaynaklı, aranabilir ve puanlanabilir bir atlasa çevirmek: katalog, şablon, karar paneli.",
+    "tags": [
+      "Astro",
+      "Veri modeli",
+      "Kaynak denetimi"
+    ]
+  }
+]

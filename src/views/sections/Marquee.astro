@@ -1,0 +1,17 @@
+---
+interface Props { items: readonly string[]; reverse?: boolean }
+const { items, reverse = false } = Astro.props
+const list = [...items, ...items]
+---
+<div class="root" data-effect="marquee" data-reverse={reverse ? '' : undefined} aria-hidden="true">
+  <div class="track" data-track>
+    {list.map((t) => <span class="item">{t}<i class="dot"></i></span>)}
+  </div>
+</div>
+
+<style>
+  .root { overflow: clip; padding-block: var(--space-3); background: var(--c-ink-2); }
+  .track { display: flex; width: max-content; will-change: transform; }
+  .item { display: inline-flex; align-items: center; gap: 2rem; padding-right: 2rem; font-family: var(--font-display); font-size: var(--fs-3); font-weight: 600; letter-spacing: -0.02em; color: transparent; -webkit-text-stroke: 1px var(--c-bone-dim); white-space: nowrap; }
+  .dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--c-ember); flex: none; }
+</style>

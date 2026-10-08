@@ -1,0 +1,44 @@
+[
+  {
+    "value": 93,
+    "suffix": "+",
+    "label": "açık kaynak depo",
+    "id": "st1",
+    "order": 1
+  },
+  {
+    "value": 920,
+    "suffix": "",
+    "label": "eserlik kitap kataloğu",
+    "id": "st2",
+    "order": 2
+  },
+  {
+    "value": 950,
+    "suffix": "",
+    "label": "doğrulanan domain adayı",
+    "id": "st3",
+    "order": 3
+  },
+  {
+    "value": 132,
+    "suffix": "",
+    "label": "puanlanan ticari seçenek",
+    "id": "st4",
+    "order": 4
+  },
+  {
+    "value": 12,
+    "suffix": "",
+    "label": "ürün sayfası paradigması",
+    "id": "st5",
+    "order": 5
+  },
+  {
+    "value": 320,
+    "suffix": " px",
+    "label": "her arayüzün başlangıç genişliği",
+    "id": "st6",
+    "order": 6
+  }
+]

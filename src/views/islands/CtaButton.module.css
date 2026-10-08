@@ -1,0 +1,4 @@
+.primary { background: var(--c-ember); color: var(--c-ink); font-weight: 700; min-height: var(--target); transition: background var(--dur-1); }
+.primary:hover { background: var(--c-gold); }
+.ghost { color: var(--c-bone); min-height: var(--target); }
+.ghost:hover { background: var(--c-ink-3); }

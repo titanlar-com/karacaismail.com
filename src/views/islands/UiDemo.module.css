@@ -1,0 +1,18 @@
+.board { display: grid; gap: var(--space-2); grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+.tile { background: var(--c-ink-2); border-radius: var(--radius-2); padding: var(--space-2); display: grid; gap: 0.5rem; align-content: start; min-height: 6.5rem; will-change: transform; }
+.label { font-size: var(--fs-0); color: var(--c-bone-dim); }
+.kpi { font-family: var(--font-display); font-size: var(--fs-3); line-height: 1; color: var(--c-bone); }
+.meta { font-size: var(--fs-0); color: var(--c-bone-dim); }
+.row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.spark { width: 100%; height: 2rem; }
+.bars { width: 100%; height: 2.75rem; }
+.ring { font-weight: 700; font-size: var(--fs-0); }
+/* dar ekranda yalnızca ilk altı parça; geniş ekranda tamamı */
+.board > .tile:nth-child(n + 7) { display: none; }
+@media (min-width: 40rem) { .board { grid-template-columns: repeat(3, minmax(0, 1fr)); } .board > .tile:nth-child(n + 7) { display: grid; } }
+@media (min-width: 64rem) { .board { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Mantine'in küçük varsayılan yazı boyutları: tüm okunur metin en az 1rem */
+.avatarText { font-size: var(--fs-0); }
+.badge { height: auto; min-height: 1.75rem; padding-block: 0.15rem; }
+.badgeLabel { font-size: var(--fs-0); text-transform: none; font-weight: 500; }

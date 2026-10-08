@@ -1,0 +1,38 @@
+---
+import { HomeViewModel } from '../viewmodels/HomeViewModel'
+import BaseLayout from '../views/layouts/BaseLayout.astro'
+import ActAgent from '../views/sections/ActAgent.astro'
+import ActCode from '../views/sections/ActCode.astro'
+import ActIllustration from '../views/sections/ActIllustration.astro'
+import ActInterface from '../views/sections/ActInterface.astro'
+import Contact from '../views/sections/Contact.astro'
+import Faq from '../views/sections/Faq.astro'
+import Hero from '../views/sections/Hero.astro'
+import Manifesto from '../views/sections/Manifesto.astro'
+import Marquee from '../views/sections/Marquee.astro'
+import Numbers from '../views/sections/Numbers.astro'
+import Process from '../views/sections/Process.astro'
+import Services from '../views/sections/Services.astro'
+import Stages from '../views/sections/Stages.astro'
+import Work from '../views/sections/Work.astro'
+
+// Sayfa ince tutulur (MVVM): veriyi ViewModel yükler, görünümler yalnızca sunar.
+const vm = await HomeViewModel.load()
+---
+<BaseLayout vm={vm} jsonLd={vm.jsonLd}>
+  <Hero vm={vm} />
+  <Marquee items={vm.ticker.items} />
+  <Manifesto vm={vm} />
+  <ActIllustration act={vm.act('cizim')} />
+  <ActInterface act={vm.act('duzen')} />
+  <ActCode act={vm.act('kod')} />
+  <ActAgent act={vm.act('zeka')} />
+  <Stages vm={vm} />
+  <Services vm={vm} />
+  <Marquee items={vm.ticker.items} reverse />
+  <Process vm={vm} />
+  <Work vm={vm} />
+  <Numbers vm={vm} />
+  <Faq vm={vm} />
+  <Contact vm={vm} />
+</BaseLayout>

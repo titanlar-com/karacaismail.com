@@ -1,0 +1,48 @@
+---
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+interface Props { vm: Pick<HomeViewModel, 'services'> }
+const { services } = Astro.props.vm
+---
+<section id="hizmetler" class="root" aria-labelledby="hizmet-baslik" data-effect="pinned-strip">
+  <div class="stage">
+    <header class="wrap head">
+      <p class="eyebrow">Hizmetler</p>
+      <h2 id="hizmet-baslik" class="title">Altı alanda, uçtan uca.</h2>
+      <p class="hint">Yana kaydırarak ilerleyin.</p>
+    </header>
+    <div class="track" data-track>
+      {services.map((s) => (
+        <article class="card" data-card data-effect="spotlight">
+          <span class="no">{s.number}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+          <ul class="tags">{s.tags.map((t) => <li>{t}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .root { background: var(--c-ink); padding-block: var(--space-5); }
+  .stage { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .head { display: grid; gap: var(--space-2); }
+  .title { font-size: var(--fs-4); }
+  .hint { display: none; color: var(--c-bone-dim); font-size: var(--fs-0); }
+  .track { display: grid; gap: var(--space-2); padding-inline: var(--gutter); max-width: var(--maxw); margin-inline: auto; width: 100%; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+  .card { position: relative; background: var(--c-ink-2); border-radius: var(--radius-2); overflow: clip; isolation: isolate; padding: var(--space-3); display: grid; gap: var(--space-2); align-content: start; min-height: 18rem; transition: background var(--dur-2) var(--ease-out); }
+  .card::before { content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(28rem circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--c-ember) 22%, transparent), transparent 60%); transition: opacity var(--dur-2); }
+  @media (hover: hover) { .card:hover::before { opacity: 1; } .card:hover { background: var(--c-ink-3); } }
+  .card h3 { font-size: var(--fs-2); }
+  .card p { color: var(--c-bone-dim); }
+  .no { color: var(--c-ember); font-size: var(--fs-0); }
+  .tags { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tags li { font-size: var(--fs-0); padding: 0.25rem 0.75rem; border-radius: var(--radius-pill); background: var(--c-ink-3); color: var(--c-bone); }
+
+  /* Geniş ve yeterince yüksek ekranda efekt etkinse: sabitlenen yatay şerit */
+  .root:global(.is-pinned) { padding-block: 0; height: 100svh; overflow: clip; }
+  .root:global(.is-pinned) .stage { height: 100%; align-content: center; gap: var(--space-3); padding-top: var(--nav-h); }
+  .root:global(.is-pinned) .hint { display: block; }
+  .root:global(.is-pinned) .track { display: flex; max-width: none; margin: 0; width: max-content; padding-inline: var(--gutter); will-change: transform; }
+  .root:global(.is-pinned) .card { flex: none; width: clamp(20rem, 30vw, 27rem); min-height: 18rem; }
+</style>

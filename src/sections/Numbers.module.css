@@ -1,9 +1,0 @@
-.root { background: var(--c-ink-2); }
-.stats { margin: 0 0 var(--space-5); display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
-.stats > div { display: flex; flex-direction: column-reverse; gap: 0.5rem; }
-.value { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: var(--fs-4); line-height: 1; color: var(--c-ember); font-variant-numeric: tabular-nums; }
-.label { color: var(--c-bone-dim); max-width: 18ch; }
-.title { font-size: var(--fs-4); margin-block: var(--space-2) var(--space-4); }
-.principles { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4) var(--space-3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
-.principles h3 { font-size: var(--fs-2); margin-bottom: 0.5rem; }
-.principles p { color: var(--c-bone-dim); }

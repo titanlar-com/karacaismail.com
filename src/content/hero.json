@@ -1,0 +1,20 @@
+[
+  {
+    "id": "main",
+    "kicker": "CTO · Dijital Zekâ Stratejisti · Danışman",
+    "lines": [
+      "Stratejiyi mimariye,",
+      "mimariyi çalışan",
+      "ürüne çeviririm."
+    ],
+    "lead": "İstanbul'dan, titanlar.com çatısı altında, iş süreçlerini sürdürülebilir, güvenli ve otomasyona hazır sistemlere dönüştürüyorum. Çizerim, düzenlerim, yazarım, ajanlara devrederim.",
+    "primary": {
+      "label": "Birlikte çalışalım",
+      "href": "#iletisim"
+    },
+    "secondary": {
+      "label": "Çalışmalarım",
+      "href": "#calismalar"
+    }
+  }
+]

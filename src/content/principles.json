@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Açık kaynak",
+    "text": "Kaynak kod ve kararlar herkese açık depoda durur. Gizli bilgiler koddan ayrı tutulur.",
+    "id": "pr1",
+    "order": 1
+  },
+  {
+    "title": "Kanıt önce",
+    "text": "Her iddia kaynakla, her karar gerekçeyle yazılır. Doğrulanmayan şey doğrulanmadı diye işaretlenir.",
+    "id": "pr2",
+    "order": 2
+  },
+  {
+    "title": "320 pikselden başla",
+    "text": "Önce en dar ekran ve en eski cihaz; sonra büyük ekran. Yazı hiçbir yerde 1 rem altına inmez.",
+    "id": "pr3",
+    "order": 3
+  },
+  {
+    "title": "Herkes için erişilebilir",
+    "text": "Klavye, ekran okuyucu, yakınlaştırma ve azaltılmış hareket tercihi baştan hesaba katılır.",
+    "id": "pr4",
+    "order": 4
+  }
+]

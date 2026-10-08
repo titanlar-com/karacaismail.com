@@ -1,0 +1,22 @@
+---
+import { FaqAccordion } from '../islands/FaqAccordion'
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+interface Props { vm: Pick<HomeViewModel, 'faqs'> }
+const items = Astro.props.vm.faqs.map((f) => ({ q: f.q, a: f.a }))
+---
+<section id="sss" class="section root" aria-labelledby="sss-baslik">
+  <div class="wrap grid">
+    <div data-effect="reveal">
+      <p class="eyebrow">Sık sorulanlar</p>
+      <h2 id="sss-baslik" class="title">Aklınızdaki sorular.</h2>
+    </div>
+    <div data-effect="reveal" data-delay="0.1"><FaqAccordion client:visible items={items} /></div>
+  </div>
+</section>
+
+<style>
+  .root { background: var(--c-ink); }
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .title { font-size: var(--fs-4); max-width: 12ch; margin-top: var(--space-2); }
+  @media (min-width: 56rem) { .grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-5); } }
+</style>

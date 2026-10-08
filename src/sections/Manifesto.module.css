@@ -1,6 +1,0 @@
-.root { overflow: clip; }
-.root > :global(.wrap) { position: relative; z-index: 1; }
-.text { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-4); line-height: 1.08; letter-spacing: -0.03em; max-width: 24ch; margin-block: var(--space-3) var(--space-4); text-wrap: balance; }
-@media (min-width: 56rem) { .text { max-width: 30ch; } }
-.sub { max-width: var(--measure); color: var(--c-bone-dim); font-size: var(--fs-2); line-height: 1.5; }
-.shape { position: absolute; right: -8rem; top: 18%; width: 24rem; height: 24rem; border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%; background: conic-gradient(from 90deg, var(--c-ember), var(--c-gold), var(--c-tide), var(--c-ember)); opacity: 0.16; filter: blur(2px); pointer-events: none; }

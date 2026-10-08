@@ -1,25 +1,25 @@
 # karacaismail.com
 
-İsmail Karaca'nın kişisel ve danışmanlık sitesi. Vite, React 19, TypeScript, Mantine 9, GSAP (ScrollTrigger), anime.js ve Lenis.
+İsmail Karaca'nın kişisel ve danışmanlık sitesi. Astro 7 (statik HTML), React 19 + Mantine 9 adacıkları, GSAP ScrollTrigger, anime.js ve Lenis ile hareket.
+
+Mimari MVVM + OOP'dir, içerik önce JSON'dadır. Ayrıntı ve kalıcı kararlar: [AGENTS.md](AGENTS.md).
 
 ## Komutlar
 
 ```sh
 npm ci
-npm run dev        # geliştirme sunucusu
-npx tsc -b         # tip denetimi
-npm run build      # üretim derlemesi (dist/)
-npx playwright test  # Chromium, Firefox, WebKit regresyon testleri
+npm run dev            # geliştirme sunucusu
+npm run check          # astro check (tip denetimi)
+npm run build          # üretim derlemesi (dist/)
+npm run sources:build  # content-source/soruces.md -> src/content/sources.json
+npm run art:bogaz      # Boğaz illüstrasyonunu yeniden üretir
+npx playwright test    # Chromium, Firefox, WebKit
 ```
 
 ## Yayın
 
-`main` dalına her gönderim GitHub Pages'e dağıtılır (`.github/workflows/deploy.yml`). Alan adı Cloudflare DNS üzerindedir; `public/CNAME` özel alan adını sabitler.
+`main` dalına her gönderim, testler geçtikten sonra GitHub Pages'e dağıtılır (`.github/workflows/deploy.yml`). Alan adı Cloudflare DNS üzerindedir; `public/CNAME` özel alan adını sabitler.
 
-## İçerik kaynağı
+## İçerik
 
-Tüm içerik `src/data/site.ts` dosyasındadır; yalnızca GitHub profili, açık depo README'leri ve site sahibinin beyanından türetilmiştir. Doğrulanmamış müşteri, yıl veya rakam eklenmez.
-
-## Arayüz kuralları
-
-Tasarım tokenları `src/styles/tokens.css`. Tüm metinler en az 1 rem; 320 px öncelikli; odak yalnızca odaklanan öğede (`:focus-visible`); hareket `prefers-reduced-motion` ile kapanır.
+Tüm metin `src/content/*.json` içindedir ve `src/content.config.ts` şemalarıyla derleme sırasında doğrulanır. Yalnızca GitHub profili, açık depo README'leri ve site sahibinin beyanından türetilmiş, doğrulanabilir bilgi girilir.

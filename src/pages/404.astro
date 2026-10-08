@@ -1,0 +1,22 @@
+---
+import { HomeViewModel } from '../viewmodels/HomeViewModel'
+import BaseLayout from '../views/layouts/BaseLayout.astro'
+const vm = await HomeViewModel.load()
+---
+<BaseLayout vm={vm} title="Sayfa bulunamadı" path="/404" noindex>
+  <section class="section nf">
+    <div class="wrap">
+      <p class="eyebrow">404</p>
+      <h1>Aradığınız sayfa burada değil.</h1>
+      <p class="lead">Adres yanlış yazılmış ya da sayfa taşınmış olabilir.</p>
+      <p><a href="/">Ana sayfaya dön</a> · <a href="/kaynaklar">Kaynaklar</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf { min-height: 80svh; display: grid; align-items: center; padding-top: 8rem; }
+  h1 { font-size: var(--fs-4); max-width: 14ch; margin-block: var(--space-2); }
+  .lead { color: var(--c-bone-dim); margin-bottom: var(--space-3); font-size: var(--fs-2); }
+  a { color: var(--c-ember); }
+</style>

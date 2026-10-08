@@ -1,0 +1,39 @@
+---
+import { UiDemo } from '../islands/UiDemo'
+import type { Act } from '../../models/Content'
+interface Props { act: Act }
+const { act } = Astro.props
+---
+<section id="duzen" class="root" aria-labelledby="duzen-baslik" data-effect="components-morph">
+  <div class="stage">
+    <div class="wrap grid">
+      <div class="copy" data-copy>
+        <p class="eyebrow">{act.kicker}</p>
+        <h2 id="duzen-baslik">{act.title}</h2>
+        <p class="text">{act.text}</p>
+        <p class="note">{act.note}</p>
+      </div>
+      <figure class="demo" role="img" aria-label={act.alt}>
+        <UiDemo />
+        <svg class="guides" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path data-guide d="M33.3 0V100M66.6 0V100M0 33.3H100M0 66.6H100" />
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+  .root { position: relative; height: 300svh; background: var(--c-ink); }
+  .stage { position: sticky; top: 0; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: var(--nav-h); }
+  .grid { display: grid; gap: var(--space-3); align-items: center; }
+  .copy { display: grid; gap: var(--space-2); }
+  h2 { font-size: var(--fs-4); max-width: 12ch; }
+  .text { max-width: 44ch; color: var(--c-bone); }
+  .note { color: var(--c-gold); font-size: var(--fs-0); }
+  .demo { position: relative; margin: 0; }
+  .guides { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0; }
+  .guides path { fill: none; stroke: var(--c-tide); stroke-width: 1; stroke-dasharray: 3 4; vector-effect: non-scaling-stroke; }
+  @media (min-width: 64rem) { .grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-5); } }
+  @media (max-height: 40rem) { .text { display: none; } }
+</style>

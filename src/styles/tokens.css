@@ -55,3 +55,20 @@
   --dur-1: 160ms;
   --dur-2: 420ms;
 }
+
+/* kaynaklar kataloğu (tablo) */
+:root {
+  /* Kod blokları da Outfit ile başlar (AGENTS.md); mono yalnızca yedek */
+  --font-code: 'Outfit Variable', ui-monospace, monospace;
+  --c-code-bg: #0a0d13;
+  --c-row-hover: #10151d;
+  --c-ember-soft: color-mix(in srgb, var(--c-ember) 14%, transparent);
+  --table-min: 62rem;
+  --col-tool: 13rem;
+  --col-category: 12rem;
+  --col-sub: 12rem;
+  --col-desc: 22rem;
+  --col-cdn: 6rem;
+  --code-max: 64rem;
+  --table-max-h: 75vh;
+}

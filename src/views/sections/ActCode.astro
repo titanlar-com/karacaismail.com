@@ -1,0 +1,63 @@
+---
+import { Code } from 'astro:components'
+import { SourceSnippetRepository } from '../../repositories/SourceSnippetRepository'
+import type { Act } from '../../models/Content'
+
+interface Props { act: Act }
+const { act } = Astro.props
+const snippet = act.source ? new SourceSnippetRepository().read(act.source) : null
+---
+<section id="kod" class="root" aria-labelledby="kod-baslik" data-effect="code-typing">
+  <div class="stage">
+    <div class="wrap grid">
+      <div class="copy" data-copy>
+        <p class="eyebrow">{act.kicker}</p>
+        <h2 id="kod-baslik">{act.title}</h2>
+        <p class="text">{act.text}</p>
+        <ul class="checks" aria-label="Doğrulama adımları">
+          {act.checks.map((c) => (
+            <li data-check>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M7 12.5l3.2 3.2L17 9" /></svg>
+              <span>{c}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="note">{act.note}</p>
+      </div>
+      {snippet && (
+        <figure class="editor" role="group" aria-label={act.alt}>
+          <figcaption class="file">{snippet.file}</figcaption>
+          <div class="code" tabindex="0" role="region" aria-label="Kod, yatay kaydırılabilir">
+            <Code code={snippet.code} lang={snippet.lang} theme="vitesse-dark" />
+            <i class="caret" data-caret aria-hidden="true"></i>
+          </div>
+        </figure>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .root { position: relative; height: 300svh; background: var(--c-ink-2); }
+  .stage { position: sticky; top: 0; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: var(--nav-h); }
+  .grid { display: grid; gap: var(--space-3); align-items: center; }
+  .copy { display: grid; gap: var(--space-2); }
+  h2 { font-size: var(--fs-4); max-width: 12ch; }
+  .text { max-width: 44ch; }
+  .note { color: var(--c-gold); font-size: var(--fs-0); }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+  .checks li { display: flex; align-items: center; gap: 0.75rem; }
+  .checks svg { flex: none; }
+  .checks circle { fill: none; stroke: var(--c-line); stroke-width: 2; }
+  .checks path { fill: none; stroke: var(--c-tide); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .editor { margin: 0; background: var(--c-ink); border-radius: var(--radius-2); overflow: clip; min-width: 0; }
+  .file { padding: 0.75rem var(--space-2); color: var(--c-bone-dim); font-size: var(--fs-0); background: var(--c-ink-3); }
+  .code { position: relative; overflow: auto; padding: var(--space-2); max-height: 52svh; font-family: var(--font-code); font-size: var(--fs-0); line-height: 1.5; }
+  .code :global(pre) { margin: 0; background: transparent !important; font-family: inherit; font-size: inherit; line-height: inherit; white-space: pre; }
+  .code :global(code) { font-family: inherit; }
+  .code :global(.line) { display: block; min-height: 1.5em; }
+  .caret { position: absolute; width: 0.55rem; height: 1.2em; background: var(--c-ember); opacity: 0; animation: blink 1s steps(2) infinite; pointer-events: none; }
+  @keyframes blink { 50% { visibility: hidden; } }
+  @media (min-width: 64rem) { .grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-5); } }
+  @media (max-height: 40rem) { .text, .checks { display: none; } }
+</style>

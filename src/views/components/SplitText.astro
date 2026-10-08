@@ -1,0 +1,23 @@
+---
+/**
+ * Sunucuda harflere bölünen başlık satırı. Gerçek metin DOM'da kesintisiz durur (SEO, kopyalama);
+ * giriş animasyonu CSS ile oynar, JS gerektirmez. Erişilebilir ad üst başlıkta aria-label ile verilir.
+ */
+interface Props { text: string; start?: number; step?: number; class?: string }
+const { text, start = 0, step = 0.02, class: cls } = Astro.props
+const words = text.split(' ')
+let i = 0
+---
+<span class:list={['line', cls]}>{words.map((w, wi) => (
+  <Fragment><span class="w">{Array.from(w).map((c) => <span class="c" style={`--d:${(start + i++ * step).toFixed(3)}s`}>{c}</span>)}</span>{wi < words.length - 1 ? ' ' : ''}</Fragment>
+))}</span>
+
+<style>
+  .line { display: block; }
+  .w { display: inline-block; white-space: nowrap; overflow: clip; padding-bottom: 0.12em; margin-bottom: -0.12em; }
+  .c { display: inline-block; animation: char-in 1s var(--ease-out) both; animation-delay: var(--d); }
+  @keyframes char-in { from { transform: translateY(110%) rotate(6deg); opacity: 0; } to { transform: none; opacity: 1; } }
+  /* Giriş bittiğinde kırpmayı kaldır: harfler kaydırınca kutudan çıkıp dağılabilsin */
+  :global(.is-scattering) .w { overflow: visible; }
+  @media (prefers-reduced-motion: reduce) { .c { animation: none; } }
+</style>

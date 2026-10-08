@@ -1,0 +1,53 @@
+---
+import type { Act } from '../../models/Content'
+interface Props { act: Act }
+const { act } = Astro.props
+const label: Record<string, string> = { prompt: 'İstek', plan: 'Plan', tool: 'Araç', result: 'Sonuç' }
+---
+<section id="zeka" class="root" aria-labelledby="zeka-baslik" data-effect="agent-flow">
+  <div class="stage">
+    <div class="wrap grid">
+      <div class="copy" data-copy>
+        <p class="eyebrow">{act.kicker}</p>
+        <h2 id="zeka-baslik">{act.title}</h2>
+        <p class="text">{act.text}</p>
+        <p class="note">{act.note}</p>
+      </div>
+      <ol class="flow" aria-label={act.alt}>
+        {act.flow.map((s, i) => (
+          <li class={`step ${s.kind}`} data-step>
+            <span class="kind">{label[s.kind]}</span>
+            <span class="body"><span class="msg" data-msg>{s.text}</span>{s.meta && <span class="meta">{s.meta}</span>}</span>
+            {s.kind === 'tool' && <svg class="tick" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7" /></svg>}
+            <i class="line" data-line aria-hidden="true" style={i === act.flow.length - 1 ? 'display:none' : ''}></i>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  .root { position: relative; height: 300svh; background: var(--c-ink-2); }
+  .stage { position: sticky; top: 0; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: var(--nav-h); }
+  .grid { display: grid; gap: var(--space-3); align-items: center; }
+  .copy { display: grid; gap: var(--space-2); }
+  h2 { font-size: var(--fs-4); max-width: 14ch; }
+  .text { max-width: 44ch; }
+  .note { color: var(--c-gold); font-size: var(--fs-0); }
+  .flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .step { position: relative; display: grid; grid-template-columns: 5rem minmax(0, 1fr) auto; gap: 0.75rem; align-items: start; background: var(--c-ink); border-radius: var(--radius-2); padding: 0.75rem var(--space-2); }
+  .kind { font-size: var(--fs-0); color: var(--c-bone-dim); padding-top: 0.1rem; }
+  .prompt .kind, .result .kind { color: var(--c-ember); font-weight: 600; }
+  .plan .kind { color: var(--c-gold); }
+  .tool .kind { color: var(--c-tide); }
+  .body { display: grid; gap: 0.15rem; min-width: 0; }
+  .msg { color: var(--c-bone); }
+  .meta { color: var(--c-bone-dim); font-size: var(--fs-0); }
+  .tick { fill: none; stroke: var(--c-tide); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .line { display: none; }
+  .result { background: color-mix(in srgb, var(--c-ember) 14%, var(--c-ink)); }
+  @media (min-width: 64rem) { .grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-5); } }
+  @media (max-height: 44rem) { .text { display: none; } .step { padding-block: 0.5rem; } .flow { gap: 0.4rem; } }
+  @media (max-width: 40rem) and (max-height: 50rem) { .copy .note { display: none; } }
+</style>

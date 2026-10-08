@@ -5,11 +5,12 @@ export default defineConfig({
   fullyParallel: true,
   retries: process.env.CI ? 1 : 0,
   reporter: [['list']],
-  use: { baseURL: 'http://127.0.0.1:4173', trace: 'retain-on-failure' },
+  use: { baseURL: 'http://127.0.0.1:4399', trace: 'retain-on-failure' },
   webServer: {
-    command: 'npm run build && npm run preview -- --port 4173 --host 127.0.0.1',
-    url: 'http://127.0.0.1:4173',
-    reuseExistingServer: !process.env.CI,
+    command: 'npm run build && npm run preview -- --port 4399 --ignore-lock',
+    url: 'http://127.0.0.1:4399',
+    // Başka projelerin sunucusuna yanlışlıkla bağlanmamak için asla yeniden kullanma
+    reuseExistingServer: false,
     timeout: 120_000,
   },
   projects: [

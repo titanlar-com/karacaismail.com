@@ -1,0 +1,45 @@
+---
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+interface Props { vm: Pick<HomeViewModel, 'works'> }
+const { works } = Astro.props.vm
+---
+<section id="calismalar" class="section root" aria-labelledby="calisma-baslik">
+  <div class="wrap">
+    <div data-effect="reveal">
+      <p class="eyebrow">Seçilmiş çalışmalar</p>
+      <h2 id="calisma-baslik" class="title">Hepsi açık, hepsi incelenebilir.</h2>
+    </div>
+    <ul class="list">
+      {works.map((w, i) => (
+        <li class:list={{ wide: w.wide }} data-effect="reveal" data-delay={(i % 3) * 0.08}>
+          <a class="card" href={w.href} target="_blank" rel="noreferrer noopener" aria-label={w.ariaLabel} data-effect="spotlight">
+            <span class="no">{w.number}</span>
+            <h3>{w.title}</h3>
+            <p>{w.text}</p>
+            <p class="meta">{w.meta}</p>
+            <ul class="tags" aria-hidden="true">{w.tags.map((t) => <li>{t}</li>)}</ul>
+            <svg class="arrow" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .root { background: var(--c-ink); }
+  .title { font-size: var(--fs-4); max-width: 16ch; margin-block: var(--space-2) var(--space-4); }
+  .list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .list > li { display: flex; }
+  .card { position: relative; display: grid; gap: 0.75rem; align-content: start; padding: var(--space-3); text-decoration: none; color: inherit; width: 100%; min-height: 18rem; background: var(--c-ink-2); border-radius: var(--radius-2); overflow: clip; isolation: isolate; transition: background var(--dur-2) var(--ease-out); }
+  .card::before { content: ''; position: absolute; inset: 0; z-index: -1; opacity: 0; background: radial-gradient(28rem circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--c-ember) 22%, transparent), transparent 60%); transition: opacity var(--dur-2); }
+  @media (hover: hover) { .card:hover::before { opacity: 1; } .card:hover { background: var(--c-ink-3); } .card:hover .arrow { transform: translate(0.35rem, -0.35rem); } }
+  .card h3 { font-size: var(--fs-3); max-width: 14ch; }
+  .card p { color: var(--c-bone-dim); max-width: 46ch; }
+  .card .meta { color: var(--c-gold); font-size: var(--fs-0); }
+  .no { color: var(--c-ember); font-size: var(--fs-0); }
+  .tags { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tags li { font-size: var(--fs-0); padding: 0.25rem 0.75rem; border-radius: var(--radius-pill); background: var(--c-ink-3); }
+  .arrow { position: absolute; right: var(--space-3); top: var(--space-3); color: var(--c-ember); transition: transform var(--dur-2) var(--ease-out); }
+  @media (min-width: 56rem) { .list { grid-template-columns: repeat(3, minmax(0, 1fr)); } .wide { grid-column: span 2; } }
+</style>

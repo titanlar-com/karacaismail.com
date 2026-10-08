@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Fractional (yarı zamanlı) CTO ne demek?",
+    "a": "Tam zamanlı bir CTO'yu işe almadan, teknoloji yönünü belirleyen kıdemli bir kişiyle belirli saat ve kapsamda çalışmak demektir. Mimari kararlar, ekip ve satıcı seçimi, yol haritası ve kalite kapıları bu kapsama girer.",
+    "id": "q1",
+    "order": 1
+  },
+  {
+    "q": "Nasıl bir işte yardımcı olabilirsiniz?",
+    "a": "Ürün veya platformun hangi teknolojiyle, hangi sırayla ve hangi riskle kurulacağı netleşmediğinde. Özellikle Frappe / ERPNext tabanlı SaaS, yapay zekâ destekli ürünler, arayüz sistemleri ve B2B pazar yeri kurgularında.",
+    "id": "q2",
+    "order": 2
+  },
+  {
+    "q": "Çalışma biçimi ve ücretlendirme nasıl?",
+    "a": "Kapsam, süre ve çıktıya göre teklif hazırlanır. İlk görüşmede hedefi dinler, ne yapılması gerektiğini ve ne kadar süreceğini yazılı olarak paylaşırım. Sabit bir fiyat listesi yoktur.",
+    "id": "q3",
+    "order": 3
+  },
+  {
+    "q": "Çalışmalarım açık kaynak mı olacak?",
+    "a": "Varsayılan yaklaşımım açık kaynaktır. Müşteriye özel gizli bilgiler ve veriler depodan ayrı tutulur; hangi parçanın açılacağı birlikte netleştirilir.",
+    "id": "q4",
+    "order": 4
+  },
+  {
+    "q": "Yurt dışından veya uzaktan çalışır mısınız?",
+    "a": "İstanbul merkezliyim ve çalışma düzenim uzaktan çalışmaya uygundur. Gerekli oldukları yerde yüz yüze oturumlar planlanabilir.",
+    "id": "q5",
+    "order": 5
+  }
+]

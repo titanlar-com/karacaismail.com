@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../views/layouts/BaseLayout.astro'
+import SourcesTable from '../views/islands/SourcesTable'
+import { HomeViewModel } from '../viewmodels/HomeViewModel'
+import { SourcesRepository } from '../repositories/SourcesRepository'
+
+const vm = await HomeViewModel.load()
+const tools = (await new SourcesRepository().tools()).map((t) => t.toJSON())
+---
+<BaseLayout
+  vm={vm}
+  path="/kaynaklar"
+  title="Kaynaklar: web geliştirme araçları kataloğu"
+  description="CDN kodlarıyla derlenmiş web geliştirme kütüphaneleri ve araçları kataloğu: arayüz, animasyon, veri, grafik ve geliştirici araçları. Aranabilir, filtrelenebilir tablo."
+>
+  <section class="page wrap">
+    <header class="head">
+      <p class="eyebrow">Kaynaklar</p>
+      <h1>Web geliştirme araçları kataloğu</h1>
+      <p class="intro">Arayüz, etkileşim, veri, grafik ve geliştirici araçları için {tools.length} kütüphane. Her satırı açıp CDN kodunu kopyalayabilir, kategoriye ve alt kategoriye göre süzebilirsiniz.</p>
+      <p class="credit">Liste {vm.profile.name} tarafından derlenmiştir.</p>
+    </header>
+    <SourcesTable client:load tools={tools} />
+  </section>
+</BaseLayout>
+
+<style>
+  .page { padding-top: calc(var(--nav-h) + var(--space-4)); padding-bottom: var(--space-5); display: grid; gap: var(--space-4); min-width: 0; }
+  .head { display: grid; gap: var(--space-2); justify-items: start; }
+  h1 { font-size: var(--fs-3); max-width: 20ch; }
+  .intro { font-size: var(--fs-1); max-width: var(--measure); color: var(--c-bone); }
+  .credit { color: var(--c-bone-dim); font-size: var(--fs-0); }
+</style>

@@ -1,0 +1,23 @@
+---
+import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
+interface Props { profile: HomeViewModel['profile'] }
+const { profile } = Astro.props
+---
+<footer class="root">
+  <div class="mark" data-effect="parallax-x" aria-hidden="true">KARACA</div>
+  <div class="wrap row">
+    <p>© {profile.year} {profile.name}. {profile.city}.</p>
+    <p>
+      <a href={profile.orgUrl}>{profile.org}</a> · <a href="/kaynaklar">Kaynaklar</a> ·
+      <a href={profile.github} target="_blank" rel="noreferrer noopener">GitHub</a> ·
+      <a href={profile.githubOrg} target="_blank" rel="noreferrer noopener">titanlar-com</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .root { background: var(--c-ink); padding-top: var(--space-5); overflow: clip; }
+  .mark { font-family: var(--font-display); font-weight: 800; font-size: clamp(5rem, 28vw, 30rem); line-height: 0.8; letter-spacing: -0.05em; color: var(--c-ink-3); white-space: nowrap; user-select: none; text-align: center; }
+  .row { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-3); justify-content: space-between; padding-block: var(--space-3) calc(var(--space-3) + env(safe-area-inset-bottom)); color: var(--c-bone-dim); }
+  .row a { display: inline-block; min-height: 1.5rem; }
+</style>

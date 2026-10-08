@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hakkimda",
+    "label": "Hakkımda",
+    "href": "/#hakkimda",
+    "order": 1
+  },
+  {
+    "id": "cizim",
+    "label": "Çizim",
+    "href": "/#cizim",
+    "order": 2
+  },
+  {
+    "id": "hizmetler",
+    "label": "Hizmetler",
+    "href": "/#hizmetler",
+    "order": 3
+  },
+  {
+    "id": "calismalar",
+    "label": "Çalışmalar",
+    "href": "/#calismalar",
+    "order": 4
+  },
+  {
+    "id": "kaynaklar",
+    "label": "Kaynaklar",
+    "href": "/kaynaklar",
+    "order": 5
+  }
+]
