@@ -149,7 +149,7 @@ export function ParticleScene() {
     const onLeave = () => { ptr.x = ptr.y = -9999 }
     cv.addEventListener('pointerleave', onLeave)
 
-    document.fonts.ready.then(() => {
+    document.fonts.load("800 100px 'Outfit Variable'").then(() => document.fonts.ready).then(() => {
       if (dead) return
       build()
       raf = requestAnimationFrame(draw)
