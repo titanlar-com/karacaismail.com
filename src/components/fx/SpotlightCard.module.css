@@ -1,0 +1,21 @@
+.card {
+  position: relative;
+  background: var(--c-ink-2);
+  border-radius: var(--radius-2);
+  overflow: clip;
+  isolation: isolate;
+  transition: background var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(28rem circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--c-ember) 22%, transparent), transparent 60%);
+  transition: opacity var(--dur-2);
+}
+@media (hover: hover) {
+  .card:hover::before { opacity: 1; }
+  .card:hover { background: var(--c-ink-3); }
+}

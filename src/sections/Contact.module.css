@@ -1,0 +1,20 @@
+.root { background: var(--c-ink-2); }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+.title { font-size: var(--fs-4); max-width: 14ch; margin-block: var(--space-2) var(--space-3); }
+.lead { color: var(--c-bone-dim); max-width: 44ch; font-size: var(--fs-2); line-height: 1.45; }
+.links { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: grid; gap: 0.25rem; }
+.links a { display: inline-flex; align-items: center; gap: 0.75rem; min-height: var(--target); color: var(--c-bone); text-underline-offset: 0.3em; text-decoration-color: var(--c-ember); overflow-wrap: anywhere; }
+.form { display: grid; gap: var(--space-2); }
+.label { color: var(--c-bone); font-size: var(--fs-0); margin-bottom: 0.4rem; font-weight: 600; }
+.input { background: var(--c-ink); color: var(--c-bone); border: 1px solid var(--c-line); border-radius: var(--radius-1); min-height: var(--target); font-size: var(--fs-0); font-family: var(--font-body); padding-inline: 1rem; }
+textarea.input { padding-block: 0.75rem; }
+.input::placeholder { color: var(--c-bone-dim); opacity: 1; }
+.input:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; border-color: transparent; }
+.dropdown { background: var(--c-ink-3); border: 1px solid var(--c-line); border-radius: var(--radius-1); padding: 0.25rem; }
+.option { color: var(--c-bone); font-size: var(--fs-0); min-height: var(--target); border-radius: calc(var(--radius-1) - 2px); padding: 0.6rem 0.9rem; }
+.option[data-combobox-selected], .option[data-combobox-active] { background: var(--c-ember); color: var(--c-ink); }
+@media (hover: hover) { .option:hover { background: var(--c-ink); color: var(--c-ember); } }
+.send { background: var(--c-ember); color: var(--c-ink); font-weight: 700; min-height: var(--target); }
+.send:hover { background: var(--c-gold); }
+.note { margin-top: var(--space-2); color: var(--c-bone-dim); font-size: var(--fs-0); max-width: 44ch; }
+@media (min-width: 56rem) { .grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-5); } }

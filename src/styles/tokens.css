@@ -1,0 +1,50 @@
+:root {
+  /* yüzeyler */
+  --c-ink: #07090d;
+  --c-ink-2: #0d1118;
+  --c-ink-3: #151b25;
+  --c-line: #243040;
+  /* metin */
+  --c-bone: #ece6d8;
+  --c-bone-dim: #b4ae9f;
+  /* marka: Boğaz'da gün batımı bakırı ve derin deniz */
+  --c-ember: #ff7a3d;
+  --c-ember-deep: #d9501a;
+  --c-tide: #3fb6c4;
+  --c-gold: #f2c14e;
+  --c-focus: #ffb27f;
+
+  /* tipografi: tüm adımlar en az 1rem */
+  --font-display: 'Bricolage Grotesque Variable', 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+  --fs-0: 1rem;
+  --fs-1: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --fs-2: clamp(1.25rem, 1.05rem + 0.9vw, 1.75rem);
+  --fs-3: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  --fs-4: clamp(2.25rem, 1.2rem + 4.6vw, 5rem);
+  --fs-5: clamp(2.5rem, 0.8rem + 8.4vw, 9rem);
+  --lh-tight: 1.02;
+  --lh-body: 1.6;
+
+  /* boşluk ve yerleşim */
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: clamp(4rem, 10vw, 9rem);
+  --measure: 62ch;
+  --maxw: 84rem;
+
+  /* şekil */
+  --radius-1: 0.5rem;
+  --radius-2: 1rem;
+  --radius-pill: 999px;
+  --target: 2.75rem; /* gerçek dokunma alanı */
+
+  /* hareket */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 160ms;
+  --dur-2: 420ms;
+}
