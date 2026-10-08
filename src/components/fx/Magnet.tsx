@@ -10,6 +10,7 @@ export function Magnet({ children, strength = 0.35 }: { children: ReactNode; str
     const qx = gsap.quickTo(el, 'x', { duration: 0.6, ease: 'power3.out' })
     const qy = gsap.quickTo(el, 'y', { duration: 0.6, ease: 'power3.out' })
     const move = (e: PointerEvent) => {
+      if (e.pointerType !== 'mouse') return
       const r = el.getBoundingClientRect()
       const dx = e.clientX - (r.left + r.width / 2)
       const dy = e.clientY - (r.top + r.height / 2)
@@ -23,10 +24,10 @@ export function Magnet({ children, strength = 0.35 }: { children: ReactNode; str
     }
     const leave = () => { qx(0); qy(0) }
     window.addEventListener('pointermove', move, { passive: true })
-    document.addEventListener('pointerleave', leave)
+    document.documentElement.addEventListener('mouseleave', leave)
     return () => {
       window.removeEventListener('pointermove', move)
-      document.removeEventListener('pointerleave', leave)
+      document.documentElement.removeEventListener('mouseleave', leave)
     }
   }, [strength])
   return <span ref={ref} style={{ display: 'inline-block' }}>{children}</span>

@@ -2,7 +2,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches-ignore: [main]
+    branches-ignore: [main] # main'de aynı testler deploy.yml içinde dağıtımdan önce çalışır
 jobs:
   test:
     runs-on: ubuntu-latest

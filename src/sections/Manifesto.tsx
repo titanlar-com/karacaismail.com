@@ -34,9 +34,9 @@ export function Manifesto() {
       <div className="wrap">
         <p className="eyebrow">Hakkımda</p>
         <h2 id="hakkimda-baslik" className="sr-only">Hakkımda</h2>
-        <p className={classes.text} aria-label={TEXT}>
+        <p className={classes.text}>
           {TEXT.split(' ').map((w, i) => (
-            <span key={i} data-w aria-hidden="true">{w} </span>
+            <span key={i} data-w>{w} </span>
           ))}
         </p>
         <p className={classes.sub}>

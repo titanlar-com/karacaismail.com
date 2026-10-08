@@ -86,11 +86,11 @@ export const WORKS = [
   },
   {
     no: '02',
-    title: 'Kitap Atlası',
-    text: 'Kaynaklı, aranabilir Türkçe okuma kataloğu. 320 piksel öncelikli, Mantine ve React Bits ile.',
-    meta: '718 eser · 23 küme',
-    tags: ['React', 'Mantine'],
-    href: 'https://karacaismail.github.io/kitapsxsil/',
+    title: 'Kitaplık',
+    text: 'Kitap kimlikleri, Türkçe baskılar ve açıklanabilir bir okuma önceliği. 320 piksel öncelikli, JavaScript gerektirmeyen katalog sürümüyle.',
+    meta: '920 eser · 29 küme',
+    tags: ['320 px', 'Katalog'],
+    href: 'https://titanlar-com.github.io/kitaps/',
   },
   {
     no: '03',

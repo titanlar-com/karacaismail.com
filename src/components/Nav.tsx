@@ -35,9 +35,9 @@ export function Nav() {
           ))}
           <a href="#iletisim" className={classes.cta} onClick={go('iletisim')}>İletişim</a>
         </nav>
-        <Burger className={classes.burger} opened={open} onClick={() => setOpen((o) => !o)} aria-label={open ? 'Menüyü kapat' : 'Menüyü aç'} color="var(--c-bone)" size="md" />
+        <Burger className={classes.burger} opened={open} onClick={() => setOpen((o) => !o)} aria-label={open ? 'Menüyü kapat' : 'Menüyü aç'} aria-expanded={open} aria-controls="mobil-menu" color="var(--c-bone)" size="md" />
       </div>
-      <Drawer opened={open} onClose={() => setOpen(false)} position="right" size="min(20rem, 88vw)" withCloseButton={false} classNames={{ content: classes.drawer, overlay: classes.overlay }} trapFocus returnFocus>
+      <Drawer id="mobil-menu" data-lenis-prevent opened={open} onClose={() => setOpen(false)} position="right" size="min(20rem, 88vw)" withCloseButton={false} classNames={{ content: classes.drawer, overlay: classes.overlay }} trapFocus returnFocus>
         <nav className={classes.mobile} aria-label="Mobil gezinme">
           {NAV.map((n) => (
             <a key={n.id} href={`#${n.id}`} onClick={go(n.id)}>{n.label}</a>

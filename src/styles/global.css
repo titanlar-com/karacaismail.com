@@ -1,5 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
-html { color-scheme: dark; -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; }
+html { color-scheme: dark; scroll-padding-top: var(--nav-h); -webkit-text-size-adjust: 100%; scrollbar-gutter: stable; }
 body {
   margin: 0;
   background: var(--c-ink);
@@ -21,10 +21,11 @@ a { color: inherit; }
 
 /* tek, markalı klavye odağı; yalnızca odaklanan öğede */
 :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
-  outline: 3px solid var(--c-focus);
-  outline-offset: 3px;
-  border-radius: var(--radius-1);
+  outline: var(--focus-w) solid var(--c-focus);
+  outline-offset: var(--focus-gap);
 }
+/* Mantine'in kendi halkasını aynı tokenlı gösterge ile değiştir (tek gösterge) */
+.mantine-focus-auto:focus-visible { outline: var(--focus-w) solid var(--c-focus); outline-offset: var(--focus-gap); }
 :where(a, button, [role='button']):focus:not(:focus-visible) { outline: none; }
 
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }

@@ -12,7 +12,7 @@ export function Services() {
   useGSAP(
     () => {
       const mm = gsap.matchMedia()
-      mm.add('(min-width: 56rem) and (min-height: 560px)', () => {
+      mm.add('(min-width: 56rem) and (min-height: 44rem)', () => {
         if (prefersReducedMotion()) return
         const t = track.current!
         const dist = () => Math.max(0, t.scrollWidth - window.innerWidth + 48)
@@ -26,12 +26,12 @@ export function Services() {
           if (i === 0) return
           gsap.fromTo(
             c,
-            { y: 90 + (i % 3) * 30, rotate: (i % 2 ? 1 : -1) * 7, opacity: 0.25, scale: 0.92 },
+            { y: 40 + (i % 3) * 10, rotate: (i % 2 ? 1 : -1) * 5, opacity: 0.25, scale: 0.94 },
             { y: 0, rotate: 0, opacity: 1, scale: 1, ease: 'power2.out', scrollTrigger: { trigger: c, containerAnimation: run, start: 'left 98%', end: 'left 55%', scrub: true } },
           )
         })
       })
-      mm.add('(max-width: 55.99rem), (max-height: 559px)', () => {
+      mm.add('(max-width: 55.99rem), (max-height: 43.99rem)', () => {
         if (prefersReducedMotion()) return
         gsap.utils.toArray<HTMLElement>('[data-card]').forEach((c) => {
           gsap.from(c, { y: 50, opacity: 0, duration: 0.9, ease: 'expo.out', scrollTrigger: { trigger: c, start: 'top 90%', once: true } })

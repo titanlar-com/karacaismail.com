@@ -4,7 +4,7 @@ import { cloudPoints, textPoints, type Pt } from '../lib/particles'
 import { ScrollTrigger, prefersReducedMotion, hasFinePointer } from '../lib/motion'
 import classes from './ParticleScene.module.css'
 
-const COLORS = ['#ff7a3d', '#f2c14e', '#ece6d8', '#3fb6c4']
+const COLOR_TOKENS = ['--c-ember', '--c-gold', '--c-bone', '--c-tide'] as const
 const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v))
 
@@ -35,13 +35,20 @@ export function ParticleScene() {
     let visible = false
     let raf = 0
     let lastStage = 0
+    let dead = false
+    let builtW = 0
+    let colors: string[] = COLOR_TOKENS.map(() => '#fff')
     let prev = 0
     const ptr = { x: -9999, y: -9999 }
     const fine = hasFinePointer()
 
     const build = () => {
+      if (dead) return
       const rect = cv.getBoundingClientRect()
       w = Math.max(1, Math.floor(rect.width))
+      const css = getComputedStyle(document.documentElement)
+      colors = COLOR_TOKENS.map((t) => css.getPropertyValue(t).trim() || '#fff')
+      builtW = w
       h = Math.max(1, Math.floor(rect.height))
       dpr = Math.min(window.devicePixelRatio || 1, 2)
       cv.width = Math.floor(w * dpr)
@@ -57,7 +64,7 @@ export function ParticleScene() {
           sy: Math.sin(ang) * mag,
           d: Math.random(),
           swirl: (Math.random() - 0.5) * 2.4,
-          color: Math.floor((i / n) * COLORS.length + Math.random() * 0.9) % COLORS.length,
+          color: Math.floor((i / n) * colors.length + Math.random() * 0.9) % colors.length,
           size: 1.4 + Math.random() * 1.6,
           ph: Math.random() * Math.PI * 2,
         }
@@ -81,8 +88,8 @@ export function ParticleScene() {
       const A = targets[a], B = targets[a + 1]
       const cx = w / 2, cy = h / 2
       const sec = time * 0.001
-      for (let c = 0; c < COLORS.length; c++) {
-        ctx.fillStyle = COLORS[c]
+      for (let c = 0; c < colors.length; c++) {
+        ctx.fillStyle = colors[c]
         ctx.globalAlpha = c === 2 ? 0.85 : 1
         for (let i = 0; i < parts.length; i++) {
           const p = parts[i]
@@ -117,7 +124,12 @@ export function ParticleScene() {
     }
 
     let timer = 0
-    const rebuild = () => { window.clearTimeout(timer); timer = window.setTimeout(build, 200) }
+    const rebuild = () => {
+      // Mobil adres çubuğu yüksekliği değiştirir; yalnızca genişlik değişince yeniden kur
+      if (builtW && Math.floor(cv.getBoundingClientRect().width) === builtW) return
+      window.clearTimeout(timer)
+      timer = window.setTimeout(build, 200)
+    }
     const ro = new ResizeObserver(rebuild)
     ro.observe(cv)
     const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { rootMargin: '10% 0px' })
@@ -134,17 +146,24 @@ export function ParticleScene() {
       ptr.y = e.clientY - r.top
     }
     cv.addEventListener('pointermove', onMove)
-    cv.addEventListener('pointerleave', () => { ptr.x = ptr.y = -9999 })
+    const onLeave = () => { ptr.x = ptr.y = -9999 }
+    cv.addEventListener('pointerleave', onLeave)
 
-    document.fonts.ready.then(() => { build(); raf = requestAnimationFrame(draw) })
+    document.fonts.ready.then(() => {
+      if (dead) return
+      build()
+      raf = requestAnimationFrame(draw)
+    })
 
     return () => {
+      dead = true
       cancelAnimationFrame(raf)
       window.clearTimeout(timer)
       ro.disconnect()
       io.disconnect()
       st.kill()
       cv.removeEventListener('pointermove', onMove)
+      cv.removeEventListener('pointerleave', onLeave)
     }
   }, [reduced])
 

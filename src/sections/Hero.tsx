@@ -33,10 +33,10 @@ export function Hero() {
       <DotGrid />
       <div className={`wrap ${classes.content}`} data-hero-fade>
         <p className={`eyebrow ${classes.kicker}`}>{SITE.role}</p>
-        <h1 id="hero-baslik" className={classes.title}>
-          <SplitChars text="Stratejiyi mimariye," as="span" delay={0.2} />
-          <SplitChars text="mimariyi çalışan" as="span" delay={0.45} />
-          <SplitChars text="ürüne çeviririm." as="span" delay={0.7} />
+        <h1 id="hero-baslik" className={classes.title} aria-label="Stratejiyi mimariye, mimariyi çalışan ürüne çeviririm.">
+          <SplitChars decorative text="Stratejiyi mimariye," as="span" delay={0.2} />
+          <SplitChars decorative text="mimariyi çalışan" as="span" delay={0.45} />
+          <SplitChars decorative text="ürüne çeviririm." as="span" delay={0.7} />
         </h1>
         <p className={classes.lead}>
           Ben {SITE.name}. {SITE.city}'dan, <a href={SITE.orgUrl}>{SITE.org}</a> çatısı altında, iş süreçlerini sürdürülebilir, güvenli ve otomasyona hazır yazılım sistemlerine dönüştürüyorum.

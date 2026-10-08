@@ -15,7 +15,12 @@ let lenis: Lenis | null = null
 
 export function initSmoothScroll(): () => void {
   if (prefersReducedMotion()) return () => {}
-  lenis = new Lenis({ lerp: 0.1, smoothWheel: true })
+  lenis = new Lenis({
+    lerp: 0.1,
+    smoothWheel: true,
+    // Çekmece, liste kutusu ve iletişim penceresi kendi içinde kaysın; arkadaki sayfa değil
+    prevent: (node) => !!node.closest('[role="dialog"], [role="listbox"], [data-lenis-prevent]'),
+  })
   lenis.on('scroll', (l: Lenis) => {
     scroll.velocity = l.velocity
     ScrollTrigger.update()
@@ -36,6 +41,9 @@ export function scrollToId(id: string) {
   if (lenis) lenis.scrollTo(el, { offset: -64, duration: 1.6 })
   else el.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
   history.replaceState(null, '', `#${id}`)
+  // Klavye ve ekran okuyucu kullanıcısı hedef bölüme taşınsın
+  if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1')
+  el.focus({ preventScroll: true })
 }
 
 export { gsap, ScrollTrigger }

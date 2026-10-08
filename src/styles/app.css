@@ -1,4 +1,4 @@
 @import './tokens.css';
 @import './global.css';
 
-.progress { position: fixed; inset: 0 0 auto 0; height: 3px; background: linear-gradient(90deg, var(--c-ember), var(--c-gold)); transform: scaleX(0); transform-origin: left; z-index: 300; }
+.progress { position: fixed; inset: 0 0 auto 0; height: var(--progress-h); background: linear-gradient(90deg, var(--c-ember), var(--c-gold)); transform: scaleX(0); transform-origin: left; z-index: var(--z-progress); }

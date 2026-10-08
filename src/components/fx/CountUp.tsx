@@ -22,7 +22,8 @@ export function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
     return () => io.disconnect()
   }, [to])
   return (
-    <span ref={ref} aria-label={`${to}${suffix}`}>
+    <span ref={ref}>
+      <span className="sr-only">{to.toLocaleString('tr-TR')}{suffix}</span>
       <span aria-hidden="true">{val.toLocaleString('tr-TR')}{suffix}</span>
     </span>
   )
