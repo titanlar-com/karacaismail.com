@@ -2,13 +2,10 @@
   {
     "id": "main",
     "items": [
-      "Frappe",
-      "ERPNext",
       "React",
       "TypeScript",
       "Astro",
       "Mantine",
-      "Keycloak",
       "MCP",
       "Claude",
       "Codex",

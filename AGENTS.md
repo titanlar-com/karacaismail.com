@@ -32,4 +32,5 @@ Genel kişisel kurallar (Git yazarlığı, açık kaynak, Colima, arayüz ve QA)
 - Yayın: GitHub Pages (Actions), özel alan adı `karacaismail.com`, DNS Cloudflare'de ve DNS only (gri bulut). GitHub Pages A kayıtları yalnızca `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (başka adres yazma).
 - Doğrulama: `npx astro check` (CI'da da bu çalışır; `tsc -b` .astro dosyalarını denetlemez) ve `npx playwright test` (Chromium, Firefox, WebKit; `playwright.config.ts` yalnızca 4399 portunda kendi önizlemesini kullanır, başka projelerin sunucusunu yeniden kullanmaz). Testler `deploy.yml` içinde dağıtımdan önce zorunlu çalışır. `astro preview` proje başına tek örnek çalıştırır; test için `--ignore-lock` kullanılır.
 - Aynı anda iki `astro build/check/dev` çalıştırma: `.astro` ve `dist` klasörleri çakışır.
-- Lisans henüz seçilmedi; sahibi onaylamadan LICENSE ekleme.
+- Lisans: MIT (sahibi seçti, 2026-10-08). Değiştirme yalnızca sahibinin açık talimatıyla.
+- İçerikte yer almayacak ifadeler (sahibinin talimatı): Frappe, ERPNext, Keycloak. Frappe SaaS ve CronHR işverenin projeleridir; kişisel çalışmalarda gösterilmez.

@@ -2,7 +2,7 @@
 
 İsmail Karaca'nın kişisel ve danışmanlık sitesi. Astro 7 (statik HTML), React 19 + Mantine 9 adacıkları, GSAP ScrollTrigger, anime.js ve Lenis ile hareket.
 
-Mimari MVVM + OOP'dir, içerik önce JSON'dadır. Ayrıntı ve kalıcı kararlar: [AGENTS.md](AGENTS.md).
+Lisans: MIT. Mimari MVVM + OOP'dir, içerik önce JSON'dadır. Ayrıntı ve kalıcı kararlar: [AGENTS.md](AGENTS.md).
 
 ## Komutlar
 
