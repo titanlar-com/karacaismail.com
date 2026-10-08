@@ -13,6 +13,6 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npx tsc -b
+      - run: npx astro check
       - run: npx playwright install --with-deps chromium firefox webkit
       - run: npx playwright test
