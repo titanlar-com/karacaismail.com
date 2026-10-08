@@ -1,17 +1,37 @@
+import { useGSAP } from '@gsap/react'
 import { Button } from '@mantine/core'
 import { IconArrowDown } from '@tabler/icons-react'
 import { DotGrid } from '../components/fx/DotGrid'
 import { Magnet } from '../components/fx/Magnet'
 import { SplitChars } from '../components/fx/SplitChars'
 import { SITE } from '../data/site'
-import { scrollToId } from '../lib/motion'
+import { useRef } from 'react'
+import { gsap, prefersReducedMotion, scrollToId } from '../lib/motion'
 import classes from './Hero.module.css'
 
 export function Hero() {
+  const root = useRef<HTMLElement>(null)
+
+  // Aşağı kaydırdıkça başlığın harfleri dağılır; geri dönünce toparlanır
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return
+      const chars = gsap.utils.toArray<HTMLElement>('[data-ch]')
+      if (!chars.length) return
+      const tl = gsap.timeline({ scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom 20%', scrub: 0.6 } })
+      chars.forEach((c, i) => {
+        const a = (i * 137.5 * Math.PI) / 180
+        tl.to(c, { x: Math.cos(a) * (120 + (i % 7) * 60), y: Math.sin(a) * (80 + (i % 5) * 50) - 120, skewX: ((i % 9) - 4) * 8, scale: 0.6 + (i % 4) * 0.2, ease: 'none', immediateRender: false }, 0)
+      })
+      tl.to('[data-hero-fade]', { opacity: 0, ease: 'none' }, 0.1)
+    },
+    { scope: root },
+  )
+
   return (
-    <section id="top" className={classes.root} aria-labelledby="hero-baslik">
+    <section ref={root} id="top" className={classes.root} aria-labelledby="hero-baslik">
       <DotGrid />
-      <div className={`wrap ${classes.content}`}>
+      <div className={`wrap ${classes.content}`} data-hero-fade>
         <p className={`eyebrow ${classes.kicker}`}>{SITE.role}</p>
         <h1 id="hero-baslik" className={classes.title}>
           <SplitChars text="Stratejiyi mimariye," as="span" delay={0.2} />

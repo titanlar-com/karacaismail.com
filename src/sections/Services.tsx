@@ -16,10 +16,19 @@ export function Services() {
         if (prefersReducedMotion()) return
         const t = track.current!
         const dist = () => Math.max(0, t.scrollWidth - window.innerWidth + 48)
-        gsap.to(t, {
+        const run = gsap.to(t, {
           x: () => -dist(),
           ease: 'none',
           scrollTrigger: { trigger: root.current, pin: true, scrub: 0.8, start: 'top top', end: () => `+=${dist()}`, invalidateOnRefresh: true, anticipatePin: 1 },
+        })
+        // Kartlar şeride girerken dağınık durumdan toplanır
+        gsap.utils.toArray<HTMLElement>('[data-card]').forEach((c, i) => {
+          if (i === 0) return
+          gsap.fromTo(
+            c,
+            { y: 90 + (i % 3) * 30, rotate: (i % 2 ? 1 : -1) * 7, opacity: 0.25, scale: 0.92 },
+            { y: 0, rotate: 0, opacity: 1, scale: 1, ease: 'power2.out', scrollTrigger: { trigger: c, containerAnimation: run, start: 'left 98%', end: 'left 55%', scrub: true } },
+          )
         })
       })
       mm.add('(max-width: 55.99rem), (max-height: 559px)', () => {
