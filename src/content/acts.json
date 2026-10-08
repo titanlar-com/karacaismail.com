@@ -5,7 +5,7 @@
     "kicker": "01",
     "title": "Önce çizerim.",
     "text": "Bir fikir önce bir görüntüdür. Boğaz'da bir akşamı, çizgiyi ve rengi sayfaya kendim koydum; kaydırdıkça katmanlar birbirinden ayrılıp derinleşir.",
-    "note": "Bu sahnedeki her şey elle çizilmiş SVG.",
+    "note": "Bu sahnedeki çizim, kodla üretilen bir SVG: geometriyi ben yazdım.",
     "alt": "Gün batımında Boğaz: güneş, tepeler, kubbe ve minareli siluet, köprü, deniz ve martılar."
   },
   {
@@ -14,7 +14,7 @@
     "kicker": "02",
     "title": "Sonra düzenlerim.",
     "text": "Dağınık parçalar; doğru boşluk, ritim ve hiyerarşiyle bir arayüze dönüşür. İyi deneyim görünmez, yalnızca kolay hissettirir.",
-    "note": "Parçalar gerçek arayüz bileşenleri.",
+    "note": "Parçalar gerçek arayüz bileşenleri; gösterilen değerler örnektir.",
     "alt": "Dağınık arayüz bileşenleri toplanıp düzenli bir panele dönüşür."
   },
   {

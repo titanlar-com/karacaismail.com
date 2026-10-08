@@ -1,6 +1,6 @@
 ---
 import '@fontsource-variable/outfit'
-import '@mantine/core/styles.css'
+import '../../styles/mantine.css'
 import '../../styles/app.css'
 import Footer from '../components/Footer.astro'
 import Nav from '../components/Nav.astro'
@@ -28,7 +28,7 @@ const og = new URL('/og.png', vm.profile.siteUrl).toString()
     <meta name="theme-color" content="#07090d" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {!Astro.props.noindex && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {Astro.props.noindex && <meta name="robots" content="noindex" />}
     <meta property="og:type" content="website" />

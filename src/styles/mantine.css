@@ -1,0 +1,40 @@
+/*
+ * Mantine stillerinin yalnızca kullanılan bileşenlere ait kısmı (tam styles.css ~290 KB yerine ~100 KB).
+ * Yeni bir Mantine bileşeni eklenirse, bileşenin ve bağımlılıklarının CSS dosyasını buraya ekle.
+ * Bağımlılıklar: Button>UnstyledButton+Loader, Drawer>ModalBase+Overlay+CloseButton+ScrollArea,
+ * Select>Combobox+Popover+Input+ScrollArea+CloseButton, Chip/Switch>InlineInput, SegmentedControl>FloatingIndicator,
+ * Pagination>UnstyledButton+Group.
+ */
+@import '@mantine/core/styles/baseline.css';
+@import '@mantine/core/styles/default-css-variables.css';
+@import '@mantine/core/styles/global.css';
+@import '@mantine/core/styles/UnstyledButton.css';
+@import '@mantine/core/styles/VisuallyHidden.css';
+@import '@mantine/core/styles/Text.css';
+@import '@mantine/core/styles/Group.css';
+@import '@mantine/core/styles/Paper.css';
+@import '@mantine/core/styles/Loader.css';
+@import '@mantine/core/styles/ActionIcon.css';
+@import '@mantine/core/styles/CloseButton.css';
+@import '@mantine/core/styles/Button.css';
+@import '@mantine/core/styles/Burger.css';
+@import '@mantine/core/styles/Overlay.css';
+@import '@mantine/core/styles/ModalBase.css';
+@import '@mantine/core/styles/Drawer.css';
+@import '@mantine/core/styles/ScrollArea.css';
+@import '@mantine/core/styles/Popover.css';
+@import '@mantine/core/styles/Combobox.css';
+@import '@mantine/core/styles/Input.css';
+@import '@mantine/core/styles/InlineInput.css';
+@import '@mantine/core/styles/Accordion.css';
+@import '@mantine/core/styles/Avatar.css';
+@import '@mantine/core/styles/Badge.css';
+@import '@mantine/core/styles/Chip.css';
+@import '@mantine/core/styles/Pagination.css';
+@import '@mantine/core/styles/Progress.css';
+@import '@mantine/core/styles/RingProgress.css';
+@import '@mantine/core/styles/FloatingIndicator.css';
+@import '@mantine/core/styles/SegmentedControl.css';
+@import '@mantine/core/styles/Slider.css';
+@import '@mantine/core/styles/Switch.css';
+@import '@mantine/core/styles/Table.css';

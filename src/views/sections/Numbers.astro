@@ -1,7 +1,8 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'stats' | 'principles'> }
-const { stats, principles } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'stats' | 'principles' | 'section'> }
+const { stats, principles, section } = Astro.props.vm
+const sec = section('ilkeler')
 ---
 <section class="section root" aria-labelledby="ilke-baslik">
   <div class="wrap">
@@ -14,8 +15,8 @@ const { stats, principles } = Astro.props.vm
       ))}
     </dl>
     <div data-effect="reveal">
-      <p class="eyebrow">Çalışma ilkelerim</p>
-      <h2 id="ilke-baslik" class="title">Nasıl çalışırım?</h2>
+      <p class="eyebrow">{sec.eyebrow}</p>
+      <h2 id="ilke-baslik" class="title">{sec.title}</h2>
     </div>
     <ul class="principles">
       {principles.map((p, i) => (

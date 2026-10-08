@@ -13,7 +13,7 @@
   },
   {
     "title": "320 pikselden başla",
-    "text": "Önce en dar ekran ve en eski cihaz; sonra büyük ekran. Yazı hiçbir yerde 1 rem altına inmez.",
+    "text": "Önce en dar ekran, sonra büyük ekran. Yazı hiçbir yerde 1 rem altına inmez.",
     "id": "pr3",
     "order": 3
   },

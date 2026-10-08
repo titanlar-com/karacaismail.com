@@ -20,13 +20,15 @@ a { color: inherit; }
 ::selection { background: var(--c-ember); color: var(--c-ink); }
 
 /* tek, markalı klavye odağı; yalnızca odaklanan öğede */
-:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+:where(a, button, input, textarea, select, summary, [tabindex]:not([tabindex='-1'])):focus-visible {
   outline: var(--focus-w) solid var(--c-focus);
   outline-offset: var(--focus-gap);
 }
 /* Mantine'in kendi halkasını aynı tokenlı gösterge ile değiştir (tek gösterge) */
 .mantine-focus-auto:focus-visible { outline: var(--focus-w) solid var(--c-focus); outline-offset: var(--focus-gap); }
 :where(a, button, [role='button']):focus:not(:focus-visible) { outline: none; }
+/* Programatik odak hedefleri (bölümler, main) kapsayıcıdır: tarayıcı varsayılan çerçevesi de çizilmesin */
+[tabindex='-1']:focus, [tabindex='-1']:focus-visible { outline: none; }
 
 .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .section { position: relative; padding-block: var(--space-5); }

@@ -1,13 +1,13 @@
-import { Effect } from '../Effect'
+import { StickyScene } from '../StickyScene'
 import { Env, gsap } from '../runtime'
 
 /**
  * Boğaz illüstrasyonu: çizgiler çizilir, boyanır, güneş yükselir, katmanlar farklı hızlarda kayar.
  * HTML/SVG tam boyalı halde gelir (JS yoksa da çizim görünür); efekt çizim anını yeniden kurar.
  */
-export class Illustration extends Effect {
+export class Illustration extends StickyScene {
   protected build(): void {
-    if (Env.reducedMotion()) return
+    if (!this.goLive()) return
     const q = <T extends Element>(s: string) => Array.from(this.root.querySelectorAll<T>(s))
     const draw = q<SVGPathElement>('[data-draw]')
     const sun = q('[data-sun]')

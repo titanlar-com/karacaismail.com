@@ -15,9 +15,16 @@ export const collections = {
   profile: defineCollection({
     loader: json('profile'),
     schema: z.object({
-      name: z.string(), role: z.string(), org: z.string(), orgUrl: z.url(), city: z.string(),
+      name: z.string(), role: z.string(), jobTitle: z.string(), org: z.string(), orgUrl: z.url(), city: z.string(),
       github: z.url(), githubOrg: z.url(), email: z.email(), siteUrl: z.url(),
       seo: z.object({ title: z.string().max(70), description: z.string().max(170) }),
+    }),
+  }),
+  sections: defineCollection({
+    loader: json('sections'),
+    schema: z.object({
+      eyebrow: z.string(), title: z.string(), lead: z.string().optional(), hint: z.string().optional(),
+      seoTitle: z.string().optional(), seoDescription: z.string().optional(),
     }),
   }),
   nav: defineCollection({ loader: json('nav'), schema: z.object({ ...ordered, label: z.string(), href: z.string() }) }),

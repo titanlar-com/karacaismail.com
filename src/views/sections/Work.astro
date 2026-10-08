@@ -1,13 +1,14 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'works'> }
-const { works } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'works' | 'section'> }
+const { works, section } = Astro.props.vm
+const s = section('calismalar')
 ---
 <section id="calismalar" class="section root" aria-labelledby="calisma-baslik">
   <div class="wrap">
     <div data-effect="reveal">
-      <p class="eyebrow">Seçilmiş çalışmalar</p>
-      <h2 id="calisma-baslik" class="title">Hepsi açık, hepsi incelenebilir.</h2>
+      <p class="eyebrow">{s.eyebrow}</p>
+      <h2 id="calisma-baslik" class="title">{s.title}</h2>
     </div>
     <ul class="list">
       {works.map((w, i) => (

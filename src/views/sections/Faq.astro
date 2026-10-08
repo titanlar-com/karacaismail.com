@@ -1,14 +1,16 @@
 ---
 import { FaqAccordion } from '../islands/FaqAccordion'
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'faqs'> }
-const items = Astro.props.vm.faqs.map((f) => ({ q: f.q, a: f.a }))
+interface Props { vm: Pick<HomeViewModel, 'faqs' | 'section'> }
+const { faqs, section } = Astro.props.vm
+const items = faqs.map((f) => ({ q: f.q, a: f.a }))
+const s = section('sss')
 ---
 <section id="sss" class="section root" aria-labelledby="sss-baslik">
   <div class="wrap grid">
     <div data-effect="reveal">
-      <p class="eyebrow">Sık sorulanlar</p>
-      <h2 id="sss-baslik" class="title">Aklınızdaki sorular.</h2>
+      <p class="eyebrow">{s.eyebrow}</p>
+      <h2 id="sss-baslik" class="title">{s.title}</h2>
     </div>
     <div data-effect="reveal" data-delay="0.1"><FaqAccordion client:visible items={items} /></div>
   </div>

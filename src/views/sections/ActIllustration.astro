@@ -18,8 +18,10 @@ const { act } = Astro.props
 </section>
 
 <style>
-  .root { position: relative; height: 320svh; background: var(--c-ink); }
-  .stage { position: sticky; top: 0; height: 100svh; overflow: clip; }
+  .root { position: relative; background: var(--c-ink); }
+  .stage { position: relative; height: min(100svh, 52rem); overflow: clip; }
+  .root:global(.is-live) { height: 320svh; }
+  .root:global(.is-live) .stage { position: sticky; top: 0; height: 100svh; }
   .art { position: absolute; inset: 0; }
   .shade { position: absolute; inset: auto 0 0 0; height: 62%; background: linear-gradient(to top, color-mix(in srgb, var(--c-ink) 92%, transparent), transparent); pointer-events: none; }
   .copy { position: absolute; inset: auto 0 0 0; margin-inline: auto; padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom)); display: grid; gap: var(--space-2); }

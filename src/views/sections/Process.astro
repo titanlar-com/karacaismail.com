@@ -1,14 +1,15 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'process'> }
-const { process } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'process' | 'section'> }
+const { process, section } = Astro.props.vm
+const sec = section('surec')
 ---
 <section id="surec" class="section root" aria-labelledby="surec-baslik" data-effect="process-rail">
   <div class="wrap grid">
     <div class="side">
-      <p class="eyebrow">Süreç</p>
-      <h2 id="surec-baslik" class="title">Dört adımda, belirsizlikten teslimata.</h2>
-      <p class="lead">Her adımın sahibi, bağımlılığı ve kabul ölçütü yazılıdır.</p>
+      <p class="eyebrow">{sec.eyebrow}</p>
+      <h2 id="surec-baslik" class="title">{sec.title}</h2>
+      <p class="lead">{sec.lead}</p>
     </div>
     <ol class="steps">
       <svg class="rail" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true"><path data-rail d="M1 0 V100" pathLength="1" fill="none" stroke="var(--c-ember)" stroke-width="2" vector-effect="non-scaling-stroke" /></svg>

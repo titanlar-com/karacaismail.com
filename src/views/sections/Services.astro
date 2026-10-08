@@ -1,22 +1,23 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'services'> }
-const { services } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'services' | 'section'> }
+const { services, section } = Astro.props.vm
+const s = section('hizmetler')
 ---
 <section id="hizmetler" class="root" aria-labelledby="hizmet-baslik" data-effect="pinned-strip">
   <div class="stage">
     <header class="wrap head">
-      <p class="eyebrow">Hizmetler</p>
-      <h2 id="hizmet-baslik" class="title">Altı alanda, uçtan uca.</h2>
-      <p class="hint">Yana kaydırarak ilerleyin.</p>
+      <p class="eyebrow">{s.eyebrow}</p>
+      <h2 id="hizmet-baslik" class="title">{s.title}</h2>
+      <p class="hint">{s.hint}</p>
     </header>
     <div class="track" data-track>
-      {services.map((s) => (
+      {services.map((sv) => (
         <article class="card" data-card data-effect="spotlight">
-          <span class="no">{s.number}</span>
-          <h3>{s.title}</h3>
-          <p>{s.text}</p>
-          <ul class="tags">{s.tags.map((t) => <li>{t}</li>)}</ul>
+          <span class="no">{sv.number}</span>
+          <h3>{sv.title}</h3>
+          <p>{sv.text}</p>
+          <ul class="tags">{sv.tags.map((t) => <li>{t}</li>)}</ul>
         </article>
       ))}
     </div>

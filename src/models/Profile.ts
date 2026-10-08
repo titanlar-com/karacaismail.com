@@ -1,7 +1,7 @@
 import { Entity } from './Entity'
 
 export interface ProfileData {
-  id: string; name: string; role: string; org: string; orgUrl: string; city: string
+  id: string; name: string; role: string; jobTitle: string; org: string; orgUrl: string; city: string
   github: string; githubOrg: string; email: string; siteUrl: string
   seo: { title: string; description: string }
 }
@@ -29,7 +29,7 @@ export class Profile extends Entity<ProfileData> {
       '@type': 'Person',
       name: this.name,
       url: this.siteUrl,
-      jobTitle: 'CTO ve Dijital Zekâ Stratejisti',
+      jobTitle: this.data.jobTitle,
       worksFor: { '@type': 'Organization', name: this.org, url: this.orgUrl },
       address: { '@type': 'PostalAddress', addressLocality: this.city, addressCountry: 'TR' },
       sameAs: [this.github, this.data.githubOrg],

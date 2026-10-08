@@ -10,6 +10,7 @@ export class Marquee extends Effect {
     let half = track.scrollWidth / 2
     let visible = true
     const dir = this.root.hasAttribute('data-reverse') ? 1 : -1
+    const t0 = performance.now()
     const ro = new ResizeObserver(() => { half = track.scrollWidth / 2 })
     ro.observe(track)
     const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting })
@@ -17,7 +18,9 @@ export class Marquee extends Effect {
     const tick = () => {
       if (!visible || half <= 0) return
       const boost = Math.min(Math.abs(scrollState.velocity) * 0.35, 14)
-      x += dir * (0.6 + boost) * gsap.ticker.deltaRatio(60)
+      // Kendiliğinden akış ilk 8 saniye sürer, sonra yalnızca kaydırmaya tepki verir (otomatik hareketi durdurma ilkesi)
+      const idle = Math.max(0, 1 - (performance.now() - t0 - 8000) / 2000)
+      x += dir * (0.6 * Math.min(1, idle) + boost) * gsap.ticker.deltaRatio(60)
       if (x <= -half) x += half
       if (x > 0) x -= half
       track.style.transform = `translate3d(${x}px,0,0)`

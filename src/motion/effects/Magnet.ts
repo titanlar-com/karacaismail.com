@@ -8,6 +8,7 @@ export class Magnet extends Effect {
   protected build(): void {
     if (!Env.finePointer() || Env.reducedMotion()) return
     const el = this.root
+    const prevDisplay = el.style.display
     el.style.display = 'inline-block'
     const qx = gsap.quickTo(el, 'x', { duration: 0.6, ease: 'power3.out' })
     const qy = gsap.quickTo(el, 'y', { duration: 0.6, ease: 'power3.out' })
@@ -22,6 +23,6 @@ export class Magnet extends Effect {
     const leave = () => { qx(0); qy(0) }
     window.addEventListener('pointermove', move, { passive: true })
     document.documentElement.addEventListener('mouseleave', leave)
-    this.onDestroy(() => { window.removeEventListener('pointermove', move); document.documentElement.removeEventListener('mouseleave', leave) })
+    this.onDestroy(() => { el.style.display = prevDisplay; window.removeEventListener('pointermove', move); document.documentElement.removeEventListener('mouseleave', leave) })
   }
 }

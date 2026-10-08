@@ -38,8 +38,8 @@ export class ParticleScene extends Effect {
     if (!cv || !ctx || Env.reducedMotion()) return
     this.canvas = cv
     this.ctx2d = ctx
-    this.root.classList.add('is-live')
     const words: string[] = JSON.parse(this.root.dataset.words ?? '[]')
+    if (!words.length) return
     const fine = Env.finePointer()
 
     let timer = 0
@@ -64,9 +64,14 @@ export class ParticleScene extends Effect {
     cv.addEventListener('pointermove', onMove)
     cv.addEventListener('pointerleave', onLeave)
 
-    document.fonts.load("800 100px 'Outfit Variable'").then(() => document.fonts.ready).then(() => {
+    // Yazı tipi yüklenemese bile sahne yedek yazı tipiyle kurulur; sahne yalnızca kurulum başarılıysa etkinleşir
+    const ready = document.fonts.load("800 100px 'Outfit Variable'").then(() => document.fonts.ready).catch(() => undefined)
+    this.pending = ready.then(() => {
       if (this.dead) return
       this.setup(words)
+      if (!this.targets.length) return
+      this.root.classList.add('is-live')
+      ScrollTrigger.refresh() // is-live bölüm yüksekliğini değiştirir
       this.raf = requestAnimationFrame(this.draw)
     })
 
@@ -109,7 +114,7 @@ export class ParticleScene extends Effect {
 
   private draw = (time: number): void => {
     this.raf = requestAnimationFrame(this.draw)
-    if (!this.visible || !this.targets.length) return
+    if (!this.visible || this.targets.length < 2) return
     const dt = Math.min(0.1, (time - this.prev) / 1000 || 0.016)
     this.prev = time
     this.shown += (this.progress - this.shown) * (1 - Math.exp(-dt * 7))

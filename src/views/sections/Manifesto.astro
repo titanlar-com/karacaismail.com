@@ -1,13 +1,14 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'manifesto'> }
-const { manifesto } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'manifesto' | 'section'> }
+const { manifesto, section } = Astro.props.vm
+const s = section('hakkimda')
 ---
 <section id="hakkimda" class="section root" aria-labelledby="hakkimda-baslik" data-effect="word-reveal">
   <div class="shape" data-shape aria-hidden="true"></div>
   <div class="wrap inner">
-    <p class="eyebrow">Hakkımda</p>
-    <h2 id="hakkimda-baslik" class="sr-only">Hakkımda</h2>
+    <p class="eyebrow">{s.eyebrow}</p>
+    <h2 id="hakkimda-baslik" class="sr-only">{s.title}</h2>
     <p class="text">{manifesto.words.map((w) => <Fragment><span data-w>{w}</span>{' '}</Fragment>)}</p>
     <p class="sub">{manifesto.sub}</p>
   </div>

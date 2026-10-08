@@ -25,7 +25,7 @@ const vm = await HomeViewModel.load()
   <Manifesto vm={vm} />
   <ActIllustration act={vm.act('cizim')} />
   <ActInterface act={vm.act('duzen')} />
-  <ActCode act={vm.act('kod')} />
+  <ActCode act={vm.act('kod')} snippet={vm.snippetFor('kod')} />
   <ActAgent act={vm.act('zeka')} />
   <Stages vm={vm} />
   <Services vm={vm} />

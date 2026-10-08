@@ -1,13 +1,13 @@
-import { Effect } from '../Effect'
+import { StickyScene } from '../StickyScene'
 import { Env, gsap } from '../runtime'
 
 /**
  * Kod satır satır "yazılır" (kaydırma ilerledikçe), imleç aktif satırı izler;
  * ardından doğrulama adımları sırayla onaylanır (anime.js yerine saf GSAP: halka çizilir, işaret çıkar).
  */
-export class CodeTyping extends Effect {
+export class CodeTyping extends StickyScene {
   protected build(): void {
-    if (Env.reducedMotion()) return
+    if (!this.goLive()) return
     const lines = this.$('.line')
     const checks = this.$('[data-check]')
     const caret = this.$('[data-caret]')[0]
@@ -45,8 +45,12 @@ export class CodeTyping extends Effect {
     if (!caret || !box) return
     const b = box.getBoundingClientRect()
     const l = line.getBoundingClientRect()
+    // Satır blok olduğundan genişliği kapsayıcı kadardır; imleci gerçek metnin sonuna koy
+    const range = document.createRange()
+    range.selectNodeContents(line)
+    const text = range.getBoundingClientRect()
     caret.style.opacity = '1'
     caret.style.top = `${l.top - b.top + box.scrollTop + 4}px`
-    caret.style.left = `${Math.min(l.width, box.clientWidth - 20) + 16}px`
+    caret.style.left = `${Math.min(text.right - b.left + box.scrollLeft + 2, box.scrollWidth - 10)}px`
   }
 }

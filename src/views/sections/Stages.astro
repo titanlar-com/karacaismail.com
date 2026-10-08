@@ -1,18 +1,19 @@
 ---
 import type { HomeViewModel } from '../../viewmodels/HomeViewModel'
-interface Props { vm: Pick<HomeViewModel, 'stages'> }
-const { stages } = Astro.props.vm
+interface Props { vm: Pick<HomeViewModel, 'stages' | 'section'> }
+const { stages, section } = Astro.props.vm
+const s = section('yaklasim')
 ---
 <section id="yaklasim" class="root" aria-labelledby="yaklasim-baslik" data-effect="particle-scene" data-words={JSON.stringify(stages.map((s) => s.word))}>
   <div class="sticky">
     <div class="head wrap">
-      <p class="eyebrow">Yaklaşım</p>
-      <h2 id="yaklasim-baslik" class="title">Dağınık fikir, çalışan sistem.</h2>
+      <p class="eyebrow">{s.eyebrow}</p>
+      <h2 id="yaklasim-baslik" class="title">{s.title}</h2>
     </div>
     <canvas class="canvas" aria-hidden="true"></canvas>
     <div class="caption" aria-hidden="true">
       <div class="wrap cap-in">
-        <p class="hint">Aşağı kaydırın.</p>
+        <p class="hint">{s.hint}</p>
         {stages.map((s, i) => (
           <div class="cap" data-cap={i + 1}>
             <span class="step">{String(i + 1).padStart(2, '0')} / {String(stages.length).padStart(2, '0')}</span>

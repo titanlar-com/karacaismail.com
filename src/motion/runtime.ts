@@ -32,14 +32,20 @@ export class SmoothScroll {
     })
     gsap.ticker.add(this.tick)
     gsap.ticker.lagSmoothing(0)
+    // Sabitleme aralıkları ve is-live sahneleri belge yüksekliğini değiştirir; Lenis sınırını yeniden ölçsün
+    ScrollTrigger.addEventListener('refresh', () => this.lenis?.resize())
+  }
+
+  resize(): void {
+    this.lenis?.resize()
   }
 
   /** Aynı sayfadaki bir bölüme kay; hedefe odak ver (klavye ve ekran okuyucu). */
-  scrollTo(id: string): boolean {
+  scrollTo(id: string, immediate = false): boolean {
     const el = document.getElementById(id)
     if (!el) return false
-    if (this.lenis) this.lenis.scrollTo(el, { offset: -64, duration: 1.6 })
-    else el.scrollIntoView({ behavior: Env.reducedMotion() ? 'auto' : 'smooth' })
+    if (this.lenis) this.lenis.scrollTo(el, { offset: -64, duration: 1.6, immediate })
+    else el.scrollIntoView({ behavior: immediate || Env.reducedMotion() ? 'auto' : 'smooth' })
     history.replaceState(null, '', `#${id}`)
     if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1')
     el.focus({ preventScroll: true })

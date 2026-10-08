@@ -57,13 +57,26 @@ test.describe('içerik önce JSON, Astro statik HTML (SEO)', () => {
     expect(html).toContain('toQuestionLd')
   })
 
-  test('ilk yüklemede yalnızca gereken adacıklar hidrate edilir (Mantine yalnız etkileşimde)', async ({ page }) => {
-    const js: string[] = []
-    page.on('response', (r) => { if (r.url().endsWith('.js')) js.push(r.url()) })
+  test('client:visible adacıkları ekrana gelmeden hidrate edilmez, gelince hidrate edilir', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 800 })
     await settle(page)
-    // adacık sayısı: menü + SSS + iletişim; hepsi astro-island
     expect(await page.locator('astro-island').count()).toBeGreaterThanOrEqual(3)
+    await expect(page.locator('#sss astro-island')).toHaveAttribute('ssr', '')
+    await hydrated(page, '#sss button')
+    await expect(page.locator('#sss astro-island')).not.toHaveAttribute('ssr', '')
+  })
+
+  test('kod sahnesi gösterdiği kaynak aralığıyla uyumlu: Faq modeli sınıfıyla başlar', async ({ page }) => {
+    await settle(page)
+    const text = await page.evaluate(() => (document.querySelector('#kod .code') as HTMLElement).textContent!.trim())
+    expect(text.startsWith('export interface FaqData')).toBe(true)
+  })
+
+  test('404 sayfası: durum kodu, başlık ve noindex', async ({ page }) => {
+    const res = await page.goto('/boyle-bir-sayfa-yok')
+    expect(res?.status()).toBe(404)
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Aradığınız sayfa burada değil')
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex')
   })
 })
 
@@ -105,6 +118,101 @@ test.describe('sabitlenen hizmetler şeridi kırpılmaz', () => {
       }
     })
   }
+})
+
+test.describe('sahneler her ekranda ve JS olmadan okunur kalır', () => {
+  for (const [w, h] of [[320, 568], [390, 844], [667, 375], [768, 1024], [1280, 650]] as const) {
+    test(`${w}x${h}: yapışkan sahne ya sığar ya da normal akışta kalır`, async ({ page }) => {
+      await page.setViewportSize({ width: w, height: h })
+      await settle(page)
+      const r = await page.evaluate(() =>
+        ['duzen', 'kod', 'zeka'].map((id) => {
+          const root = document.getElementById(id) as HTMLElement
+          const live = root.classList.contains('is-live')
+          const fit = root.querySelector('[data-fit]') as HTMLElement
+          const stage = root.querySelector('.stage') as HTMLElement
+          return {
+            id, live,
+            fits: !live || fit.offsetHeight + 72 + 24 <= innerHeight,
+            sticky: getComputedStyle(stage).position === 'sticky',
+            tall: root.offsetHeight / innerHeight,
+          }
+        }),
+      )
+      for (const a of r) {
+        expect(a.fits, `${a.id} görünüm penceresine sığmıyor`).toBe(true)
+        expect(a.sticky, `${a.id}: yapışkan yalnızca etkinken`).toBe(a.live)
+        if (!a.live) expect(a.tall, `${a.id}: etkin değilken yüksek boşluk kalmamalı`).toBeLessThan(2.6)
+      }
+    })
+  }
+
+  test('JS kapalı: sahneler normal akışta, başlık ve içerikler okunur', async ({ browser }) => {
+    const ctx = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } })
+    const page = await ctx.newPage()
+    await page.goto('/')
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    const r = await page.evaluate(() =>
+      ['cizim', 'duzen', 'kod', 'zeka', 'yaklasim', 'hizmetler'].map((id) => {
+        const root = document.getElementById(id) as HTMLElement
+        const stage = root.querySelector('.stage, .sticky') as HTMLElement
+        return { id, h: root.offsetHeight / innerHeight, sticky: stage ? getComputedStyle(stage).position === 'sticky' : false }
+      }),
+    )
+    for (const a of r) {
+      expect(a.sticky, `${a.id} JS yokken yapışkan olmamalı`).toBe(false)
+      expect(a.h, `${a.id} JS yokken yüksek boşluk bırakmamalı`).toBeLessThan(2.6)
+    }
+    await expect(page.locator('#yaklasim .list h3', { hasText: 'Mimari' })).toBeVisible()
+    await ctx.close()
+  })
+})
+
+test.describe('klavye ve bağlantılar', () => {
+  test('klavyeyle sayfa içi gezinme: hedefe odak gider, bölüme odak çerçevesi çizilmez', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await settle(page)
+    await page.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'Hizmetler' }).focus()
+    await page.keyboard.press('Enter')
+    await page.waitForTimeout(2200)
+    const r = await page.evaluate(() => {
+      const el = document.activeElement as HTMLElement
+      const cs = getComputedStyle(el)
+      return { id: el.id, outline: cs.outlineStyle, w: cs.outlineWidth }
+    })
+    expect(r.id).toBe('hizmetler')
+    expect(r.outline === 'none' || r.w === '0px', 'bölüm odak çerçevesi').toBe(true)
+  })
+
+  test('atlama bağlantısı ana içeriğe odak verir, çerçeve çizmez', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await settle(page)
+    await page.locator('.skip-link').focus()
+    await page.keyboard.press('Enter')
+    await page.waitForTimeout(400)
+    const r = await page.evaluate(() => { const el = document.activeElement as HTMLElement; const cs = getComputedStyle(el); return { id: el.id, outline: cs.outlineStyle, w: cs.outlineWidth } })
+    expect(r.id).toBe('icerik')
+    expect(r.outline === 'none' || r.w === '0px').toBe(true)
+  })
+
+  test('soğuk açılış /#iletisim: pin aralıklarından sonra doğru bölüme iner', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await page.goto('/#iletisim')
+    await page.evaluate(() => document.fonts.ready)
+    await page.waitForTimeout(3500)
+    const top = await page.evaluate(() => document.getElementById('iletisim')!.getBoundingClientRect().top)
+    expect(Math.abs(top - 64), `iletişim bölümü üstten ${Math.round(top)}px`).toBeLessThan(120)
+  })
+
+  test('/kaynaklar sayfasından "İletişim" bağlantısı ana sayfada doğru bölüme iner', async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 })
+    await page.goto('/kaynaklar')
+    await page.getByRole('navigation', { name: 'Ana gezinme' }).getByRole('link', { name: 'İletişim' }).click()
+    await page.waitForURL('**/#iletisim')
+    await page.waitForTimeout(3500)
+    const top = await page.evaluate(() => document.getElementById('iletisim')!.getBoundingClientRect().top)
+    expect(Math.abs(top - 64)).toBeLessThan(120)
+  })
 })
 
 test.describe('erişilebilir adlar', () => {

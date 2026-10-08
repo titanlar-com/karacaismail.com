@@ -1,11 +1,12 @@
 import { Act, Faq, Service, Stage, Stat, Titled, Work, type ActData, type FaqData, type ServiceData, type StageData, type StatData, type TitledData, type WorkData } from '../models/Content'
-import { Hero, Manifesto, NavItem, Ticker, type HeroData } from '../models/Page'
+import { Hero, Manifesto, NavItem, Section, Ticker, type HeroData, type SectionData } from '../models/Page'
 import { Profile, type ProfileData } from '../models/Profile'
 import { ContentRepository } from './ContentRepository'
 
 /** Ana sayfanın tüm içeriğini JSON koleksiyonlarından Model nesnelerine çeviren repository. */
 export class SiteRepository extends ContentRepository {
   async profile() { return Profile.from(await this.first<ProfileData>('profile')) }
+  async sections() { return Section.of(await this.rows<SectionData>('sections')) }
   async nav() { return NavItem.of(await this.rows('nav')) }
   async hero() { return Hero.from(await this.first<HeroData>('hero')) }
   async manifesto() { return Manifesto.from(await this.first('manifesto')) }

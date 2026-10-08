@@ -1,13 +1,13 @@
-import { Effect } from '../Effect'
+import { StickyScene } from '../StickyScene'
 import { Env, gsap } from '../runtime'
 
 /**
  * Ajan akışı sahnesi: istek "yazılır", plan belirir, araç çağrıları sırayla çalışıp onaylanır, sonuç gelir.
  * İçerik JSON'dandır ve HTML'de eksiksiz durur; efekt yalnızca sunumu zamanlar. Canlı model çağrısı yoktur.
  */
-export class AgentFlow extends Effect {
+export class AgentFlow extends StickyScene {
   protected build(): void {
-    if (Env.reducedMotion()) return
+    if (!this.goLive()) return
     const steps = this.$('[data-step]')
     if (!steps.length) return
     gsap.set(steps, { opacity: 0, y: 24 })

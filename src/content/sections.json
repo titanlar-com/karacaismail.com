@@ -1,0 +1,55 @@
+[
+  {
+    "id": "hakkimda",
+    "eyebrow": "Hakkımda",
+    "title": "Hakkımda"
+  },
+  {
+    "id": "yaklasim",
+    "eyebrow": "Yaklaşım",
+    "title": "Dağınık fikir, çalışan sistem.",
+    "hint": "Aşağı kaydırın."
+  },
+  {
+    "id": "hizmetler",
+    "eyebrow": "Hizmetler",
+    "title": "Uçtan uca hizmetler.",
+    "hint": "Yana kaydırarak ilerleyin."
+  },
+  {
+    "id": "surec",
+    "eyebrow": "Süreç",
+    "title": "Belirsizlikten teslimata.",
+    "lead": "Her adımın sahibi, bağımlılığı ve kabul ölçütü yazılıdır."
+  },
+  {
+    "id": "calismalar",
+    "eyebrow": "Seçilmiş çalışmalar",
+    "title": "Hepsi açık, hepsi incelenebilir."
+  },
+  {
+    "id": "ilkeler",
+    "eyebrow": "Çalışma ilkelerim",
+    "title": "Nasıl çalışırım?"
+  },
+  {
+    "id": "sss",
+    "eyebrow": "Sık sorulanlar",
+    "title": "Aklınızdaki sorular."
+  },
+  {
+    "id": "iletisim",
+    "eyebrow": "İletişim",
+    "title": "Bir sonraki adımı birlikte yazalım.",
+    "lead": "Hedefinizi birkaç cümleyle anlatın. Kapsam, süre ve çıktıyı yazılı olarak geri paylaşırım."
+  },
+  {
+    "id": "kaynaklar",
+    "eyebrow": "Kaynaklar",
+    "title": "Web geliştirme araçları kataloğu",
+    "lead": "Arayüz, etkileşim, veri, grafik ve geliştirici araçları için {count} kütüphane. Her satırı açıp CDN kodunu kopyalayabilir, kategoriye ve alt kategoriye göre süzebilirsiniz.",
+    "hint": "Liste {name} tarafından derlenmiştir.",
+    "seoTitle": "Kaynaklar: web geliştirme araçları kataloğu",
+    "seoDescription": "CDN kodlarıyla derlenmiş web geliştirme kütüphaneleri ve araçları kataloğu: arayüz, animasyon, veri, grafik ve geliştirici araçları. Aranabilir, filtrelenebilir tablo."
+  }
+]

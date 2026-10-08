@@ -5,7 +5,7 @@ const DATA = JSON.parse(readFileSync('src/content/sources.json', 'utf8')) as Arr
 const CDN = DATA.filter((t) => t.snippets.some((s) => /https?:\/\//.test(s.code))).length
 
 const WIDTHS = [320, 360, 375, 390, 768, 1280]
-const TOTAL = 135
+const TOTAL = DATA.length
 
 const rows = (page: Page) => page.getByTestId('row')
 const count = (page: Page) => page.getByTestId('result-count')
@@ -188,4 +188,5 @@ test('320px: tablo kendi kapsayıcısında yatay kayar, sayfa kaymaz', async ({ 
   expect(await page.evaluate(() => window.scrollX)).toBe(0)
   // klavyeyle odaklanınca yalnızca klavye odağında gösterge
   await page.keyboard.press('Tab')
+  expect(await page.evaluate(() => document.activeElement !== document.body)).toBe(true)
 })

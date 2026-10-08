@@ -1,13 +1,13 @@
-import { Effect } from '../Effect'
+import { StickyScene } from '../StickyScene'
 import { Env, gsap } from '../runtime'
 
 /**
  * Dağınık arayüz parçaları, kaydırdıkça ızgaraya oturur; hizalama kılavuzları belirip kaybolur;
  * en sonda parçalar yukarı süzülüp dağılır (bir sonraki sahneye geçiş).
  */
-export class ComponentsMorph extends Effect {
+export class ComponentsMorph extends StickyScene {
   protected build(): void {
-    if (Env.reducedMotion()) return
+    if (!this.goLive()) return
     const tiles = this.$('[data-tile]').filter((t) => getComputedStyle(t).display !== 'none')
     if (!tiles.length) return
     const w = window.innerWidth

@@ -6,7 +6,7 @@ const { act } = Astro.props
 ---
 <section id="duzen" class="root" aria-labelledby="duzen-baslik" data-effect="components-morph">
   <div class="stage">
-    <div class="wrap grid">
+    <div class="wrap grid" data-fit>
       <div class="copy" data-copy>
         <p class="eyebrow">{act.kicker}</p>
         <h2 id="duzen-baslik">{act.title}</h2>
@@ -24,8 +24,10 @@ const { act } = Astro.props
 </section>
 
 <style>
-  .root { position: relative; height: 300svh; background: var(--c-ink); }
-  .stage { position: sticky; top: 0; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: var(--nav-h); }
+  .root { position: relative; background: var(--c-ink); padding-block: var(--space-5); }
+  .root:global(.is-live) { height: 300svh; padding-block: 0; }
+  .stage { display: block; }
+  .root:global(.is-live) .stage { position: sticky; top: 0; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: var(--nav-h); }
   .grid { display: grid; gap: var(--space-3); align-items: center; }
   .copy { display: grid; gap: var(--space-2); }
   h2 { font-size: var(--fs-4); max-width: 12ch; }
